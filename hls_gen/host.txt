@@ -1,0 +1,89 @@
+    // send BFT config size
+    in1[0].range(63, 32) = 0x00000000;
+    in1[0].range(31,  0) = 0x0000001f;
+    in1[1].range(63, 32) = 0x00000000;
+    in1[1].range(31,  0) = INPUT_SIZE;
+    // send input data buf size
+
+//rasterization2_m.Output_1->zculling_top.Input_1
+    in1[2].range(63, 32) = 0x0000a000; 
+    in1[2].range(31,  0) = 0x91100fe0;
+    in1[3].range(63, 32) = 0x00001080; 
+    in1[3].range(31,  0) = 0x2a480000;
+//zculling_bot.Output_1->coloringFB_bot_m.Input_1
+    in1[4].range(63, 32) = 0x00002000; 
+    in1[4].range(31,  0) = 0x98100fe0;
+    in1[5].range(63, 32) = 0x00008080; 
+    in1[5].range(31,  0) = 0x22480000;
+//data_redir_m.Output_1->rasterization2_m.Input_1
+    in1[6].range(63, 32) = 0x00009000; 
+    in1[6].range(31,  0) = 0x9a100fe0;
+    in1[7].range(63, 32) = 0x0000a080; 
+    in1[7].range(31,  0) = 0x29480000;
+//DMA.Output_1->data_transfer.Input_1
+    in1[8].range(63, 32) = 0x00000800; 
+    in1[8].range(31,  0) = 0x91900fe0;
+    in1[9].range(63, 32) = 0x00001880; 
+    in1[9].range(31,  0) = 0x20c80000;
+//coloringFB_bot_m.Output_1->coloringFB_top_m.Input_2
+    in1[10].range(63, 32) = 0x00008000; 
+    in1[10].range(31,  0) = 0x93180fe0;
+    in1[11].range(63, 32) = 0x00003080; 
+    in1[11].range(31,  0) = 0x38480000;
+//rasterization2_m.Output_3->zculling_top.Input_2
+    in1[12].range(63, 32) = 0x0000a000; 
+    in1[12].range(31,  0) = 0xb1180fe0;
+    in1[13].range(63, 32) = 0x00001080; 
+    in1[13].range(31,  0) = 0x3a580000;
+//data_transfer.Output_1->data_redir_m.Input_1
+    in1[14].range(63, 32) = 0x00001800; 
+    in1[14].range(31,  0) = 0x99100fe0;
+    in1[15].range(63, 32) = 0x00009080; 
+    in1[15].range(31,  0) = 0x21c80000;
+//coloringFB_top_m.Output_1->DMA.Input_1
+    in1[16].range(63, 32) = 0x00003000; 
+    in1[16].range(31,  0) = 0x90900fe0;
+    in1[17].range(63, 32) = 0x00000880; 
+    in1[17].range(31,  0) = 0x23480000;
+//data_redir_m.Output_2->rasterization2_m.Input_2
+    in1[18].range(63, 32) = 0x00009000; 
+    in1[18].range(31,  0) = 0xaa180fe0;
+    in1[19].range(63, 32) = 0x0000a080; 
+    in1[19].range(31,  0) = 0x39500000;
+//zculling_top.Output_1->coloringFB_top_m.Input_1
+    in1[20].range(63, 32) = 0x00001000; 
+    in1[20].range(31,  0) = 0x93100fe0;
+    in1[21].range(63, 32) = 0x00003080; 
+    in1[21].range(31,  0) = 0x21480000;
+//rasterization2_m.Output_2->zculling_bot.Input_1
+    in1[22].range(63, 32) = 0x0000a000; 
+    in1[22].range(31,  0) = 0xa2100fe0;
+    in1[23].range(63, 32) = 0x00002080; 
+    in1[23].range(31,  0) = 0x2a500000;
+//rasterization2_m.Output_4->zculling_bot.Input_2
+    in1[24].range(63, 32) = 0x0000a000; 
+    in1[24].range(31,  0) = 0xc2180fe0;
+    in1[25].range(63, 32) = 0x00002080; 
+    in1[25].range(31,  0) = 0x3a600000;
+    // start page4; 
+    in1[26].range(63, 32) = 0x00002002; 
+    in1[26].range(31,  0) = 0x00000000;
+    // start page2; 
+    in1[27].range(63, 32) = 0x00001002; 
+    in1[27].range(31,  0) = 0x00000000;
+    // start page16; 
+    in1[28].range(63, 32) = 0x00008002; 
+    in1[28].range(31,  0) = 0x00000000;
+    // start page6; 
+    in1[29].range(63, 32) = 0x00003002; 
+    in1[29].range(31,  0) = 0x00000000;
+    // start page18; 
+    in1[30].range(63, 32) = 0x00009002; 
+    in1[30].range(31,  0) = 0x00000000;
+    // start page20; 
+    in1[31].range(63, 32) = 0x0000a002; 
+    in1[31].range(31,  0) = 0x00000000;
+    // start page3; 
+    in1[32].range(63, 32) = 0x00001802; 
+    in1[32].range(31,  0) = 0x00000000;
+    // configure packets
