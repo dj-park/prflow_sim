@@ -406,21 +406,21 @@ config_parser config_parser_inst(
     .ap_done(),
     .ap_idle(),
     .ap_ready(),
-    .input1_V_TDATA(Loop_VITIS_LOOP_31_1_proc1_U0_v1_buffer_V_din),
-    .input1_V_TVALID(Loop_VITIS_LOOP_31_1_proc1_U0_v1_buffer_V_write),
+    .input1_V_TDATA(Loop_VITIS_LOOP_39_1_proc1_U0_v1_buffer_V_din),
+    .input1_V_TVALID(Loop_VITIS_LOOP_39_1_proc1_U0_v1_buffer_V_write),
     .input1_V_TREADY(v1_buffer_V_full_n),
-    .input2_V_TDATA(Loop_VITIS_LOOP_35_3_proc3_U0_v2_buffer_V_din),
-    .input2_V_TVALID(Loop_VITIS_LOOP_35_3_proc3_U0_v2_buffer_V_write),
+    .input2_V_TDATA(Loop_VITIS_LOOP_43_3_proc3_U0_v2_buffer_V_din),
+    .input2_V_TVALID(Loop_VITIS_LOOP_43_3_proc3_U0_v2_buffer_V_write),
     .input2_V_TREADY(v2_buffer_V_full_n),
     .output1_V_TDATA(tdata3),
-    .output1_V_TVALID(tvalid3),
+    .output1_V_TVALID(tvalid3), // data 
     .output1_V_TREADY(~resend_0),
     .output2_V_TDATA(tdata1),
     .output2_V_TVALID(tvalid1),
     .output2_V_TREADY(tready1),
     .output3_V_TDATA(v1_buffer_V_dout),
     .output3_V_TVALID(v1_buffer_V_empty_n),
-    .output3_V_TREADY(Loop_VITIS_LOOP_32_2_proc2_U0_v1_buffer_V_read)
+    .output3_V_TREADY(Loop_VITIS_LOOP_40_2_proc2_U0_v1_buffer_V_read)
 );
 
 data32to512 data32to512_inst(
@@ -435,8 +435,9 @@ data32to512 data32to512_inst(
     .Input_1_V_TREADY(tready2),
     .Output_1_V_TDATA(v2_buffer_V_dout),
     .Output_1_V_TVALID(v2_buffer_V_empty_n),
-    .Output_1_V_TREADY(Loop_VITIS_LOOP_36_4_proc4_U0_v2_buffer_V_read)
+    .Output_1_V_TREADY(Loop_VITIS_LOOP_44_4_proc4_U0_v2_buffer_V_read)
 );
+
 
 InterfaceWrapper1 InterfaceWrapper1_inst(
     .clk(ap_clk),
@@ -449,20 +450,15 @@ InterfaceWrapper1 InterfaceWrapper1_inst(
     .Output_1_V_V(tdata2),
     .Output_1_V_V_ap_vld(tvalid2),
     .Output_1_V_V_ap_ack(tready2),
+    .Output_2_V_V(v3_buffer_V_dout), // winner signal
+    .Output_2_V_V_ap_vld(v3_buffer_V_empty_n),
+    .Output_2_V_V_ap_ack(v3_buffer_V_read),
     .reset(ap_rst_n_inv),
     .ap_start(ap_start)
     );
 
 // UPDATE: assign hanging wires
 //assign dout_leaf_0_bft = {tvalid3, tdata3[47:0]};
-assign dout_leaf_18_bft = 0;
-assign dout_leaf_19_bft = 0;
-
-assign dout_leaf_20_bft = 0;
-assign dout_leaf_21_bft = 0;
-
-assign dout_leaf_22_bft = 0;
-assign dout_leaf_23_bft = 0;
 
 assign dout_leaf_24_bft = 0;
 assign dout_leaf_25_bft = 0;
@@ -522,58 +518,230 @@ assign din_leaf_21 = din_leaf_21_reg;
 assign din_leaf_22 = din_leaf_22_reg;
 assign din_leaf_23 = din_leaf_23_reg;
 
-assign resend_0 = resend_0_reg;
-assign resend_1 = resend_1_reg;
-assign resend_2 = resend_2_reg;
-assign resend_3 = resend_3_reg;
-assign resend_4 = resend_4_reg;
-assign resend_5 = resend_5_reg;
-assign resend_6 = resend_6_reg;
-assign resend_7 = resend_7_reg;
-assign resend_8 = resend_8_reg;
-assign resend_9 = resend_9_reg;
-assign resend_10 = resend_10_reg;
-assign resend_11 = resend_11_reg;
-assign resend_12 = resend_12_reg;
-assign resend_13 = resend_13_reg;
-assign resend_14 = resend_14_reg;
-assign resend_15 = resend_15_reg;
-assign resend_16 = resend_16_reg;
-assign resend_17 = resend_17_reg;
-assign resend_18 = resend_18_reg;
-assign resend_19 = resend_19_reg;
-assign resend_20 = resend_20_reg;
-assign resend_21 = resend_21_reg;
-assign resend_22 = resend_22_reg;
-assign resend_23 = resend_23_reg;
+// assign resend_0 = resend_0_reg;
+// assign resend_1 = resend_1_reg;
+// assign resend_2 = resend_2_reg;
+// assign resend_3 = resend_3_reg;
+// assign resend_4 = resend_4_reg;
+// assign resend_5 = resend_5_reg;
+// assign resend_6 = resend_6_reg;
+// assign resend_7 = resend_7_reg;
+// assign resend_8 = resend_8_reg;
+// assign resend_9 = resend_9_reg;
+// assign resend_10 = resend_10_reg;
+// assign resend_11 = resend_11_reg;
+// assign resend_12 = resend_12_reg;
+// assign resend_13 = resend_13_reg;
+// assign resend_14 = resend_14_reg;
+// assign resend_15 = resend_15_reg;
+// assign resend_16 = resend_16_reg;
+// assign resend_17 = resend_17_reg;
+// assign resend_18 = resend_18_reg;
+// assign resend_19 = resend_19_reg;
+// assign resend_20 = resend_20_reg;
+// assign resend_21 = resend_21_reg;
+// assign resend_22 = resend_22_reg;
+// assign resend_23 = resend_23_reg;
 
 
 always @ (posedge ap_clk) begin
-        dout_leaf_0_reg <= {tvalid3, tdata3[47:0]};
-        dout_leaf_1_reg <= dout_leaf_1; 
-        dout_leaf_2_reg <= dout_leaf_2; 
-        dout_leaf_3_reg <= dout_leaf_3; 
-        dout_leaf_4_reg <= dout_leaf_4; 
-        dout_leaf_5_reg <= dout_leaf_5; 
-        dout_leaf_6_reg <= dout_leaf_6; 
-        dout_leaf_7_reg <= dout_leaf_7; 
-        dout_leaf_8_reg <= dout_leaf_8; 
-        dout_leaf_9_reg <= dout_leaf_9; 
-        dout_leaf_10_reg <= dout_leaf_10; 
-        dout_leaf_11_reg <= dout_leaf_11; 
-        dout_leaf_12_reg <= dout_leaf_12; 
-        dout_leaf_13_reg <= dout_leaf_13; 
-        dout_leaf_14_reg <= dout_leaf_14; 
-        dout_leaf_15_reg <= dout_leaf_15; 
-        dout_leaf_16_reg <= dout_leaf_16; 
-        dout_leaf_17_reg <= dout_leaf_17; 
-        dout_leaf_18_reg <= dout_leaf_18; 
-        dout_leaf_19_reg <= dout_leaf_19; 
-        dout_leaf_20_reg <= dout_leaf_20; 
-        dout_leaf_21_reg <= dout_leaf_21; 
-        dout_leaf_22_reg <= dout_leaf_22; 
-        dout_leaf_23_reg <= dout_leaf_23; 
+        if(resend_0) begin
+            dout_leaf_0_reg <= dout_leaf_0_reg; 
+        end
+        else begin
+            dout_leaf_0_reg <= {tvalid3, tdata3[47:0]};
+        end
+
+        if(resend_1) begin
+            dout_leaf_1_reg <= dout_leaf_1_reg; 
+        end
+        else begin
+            dout_leaf_1_reg <= dout_leaf_1; 
+        end
+
+        if(resend_2) begin
+            dout_leaf_2_reg <= dout_leaf_2_reg; 
+        end
+        else begin
+            dout_leaf_2_reg <= dout_leaf_2; 
+        end
+
+        if(resend_3) begin
+            dout_leaf_3_reg <= dout_leaf_3_reg; 
+        end
+        else begin
+            dout_leaf_3_reg <= dout_leaf_3; 
+        end
+
+        if(resend_4) begin
+            dout_leaf_4_reg <= dout_leaf_4_reg; 
+        end
+        else begin
+            dout_leaf_4_reg <= dout_leaf_4; 
+        end
+
+        if(resend_5) begin
+            dout_leaf_5_reg <= dout_leaf_5_reg; 
+        end
+        else begin
+            dout_leaf_5_reg <= dout_leaf_5; 
+        end
+
+        if(resend_6) begin
+            dout_leaf_6_reg <= dout_leaf_6_reg; 
+        end
+        else begin
+            dout_leaf_6_reg <= dout_leaf_6; 
+        end
+
+        if(resend_7) begin
+            dout_leaf_7_reg <= dout_leaf_7_reg; 
+        end
+        else begin
+            dout_leaf_7_reg <= dout_leaf_7; 
+        end
+
+        if(resend_8) begin
+            dout_leaf_8_reg <= dout_leaf_8_reg; 
+        end
+        else begin
+            dout_leaf_8_reg <= dout_leaf_8; 
+        end
+
+        if(resend_9) begin
+            dout_leaf_9_reg <= dout_leaf_9_reg; 
+        end
+        else begin
+            dout_leaf_9_reg <= dout_leaf_9; 
+        end
+
+        if(resend_10) begin
+            dout_leaf_10_reg <= dout_leaf_10_reg; 
+        end
+        else begin
+            dout_leaf_10_reg <= dout_leaf_10; 
+        end
+
+        if(resend_11) begin
+            dout_leaf_11_reg <= dout_leaf_11_reg; 
+        end
+        else begin
+            dout_leaf_11_reg <= dout_leaf_11; 
+        end
+
+        if(resend_12) begin
+            dout_leaf_12_reg <= dout_leaf_12_reg; 
+        end
+        else begin
+            dout_leaf_12_reg <= dout_leaf_12; 
+        end
+
+        if(resend_13) begin
+            dout_leaf_13_reg <= dout_leaf_13_reg; 
+        end
+        else begin
+            dout_leaf_13_reg <= dout_leaf_13; 
+        end
+
+        if(resend_14) begin
+            dout_leaf_14_reg <= dout_leaf_14_reg; 
+        end
+        else begin
+            dout_leaf_14_reg <= dout_leaf_14; 
+        end
+
+        if(resend_15) begin
+            dout_leaf_15_reg <= dout_leaf_15_reg; 
+        end
+        else begin
+            dout_leaf_15_reg <= dout_leaf_15; 
+        end
+
+        if(resend_16) begin
+            dout_leaf_16_reg <= dout_leaf_16_reg; 
+        end
+        else begin
+            dout_leaf_16_reg <= dout_leaf_16; 
+        end
+
+        if(resend_17) begin
+            dout_leaf_17_reg <= dout_leaf_17_reg; 
+        end
+        else begin
+            dout_leaf_17_reg <= dout_leaf_17; 
+        end
+
+        if(resend_18) begin
+            dout_leaf_18_reg <= dout_leaf_18_reg; 
+        end
+        else begin
+            dout_leaf_18_reg <= dout_leaf_18; 
+        end
+
+        if(resend_19) begin
+            dout_leaf_19_reg <= dout_leaf_19_reg; 
+        end
+        else begin
+            dout_leaf_19_reg <= dout_leaf_19; 
+        end
+
+        if(resend_20) begin
+            dout_leaf_20_reg <= dout_leaf_20_reg; 
+        end
+        else begin
+            dout_leaf_20_reg <= dout_leaf_20; 
+        end
+
+        if(resend_21) begin
+            dout_leaf_21_reg <= dout_leaf_21_reg; 
+        end
+        else begin
+            dout_leaf_21_reg <= dout_leaf_21; 
+        end
+
+        if(resend_22) begin
+            dout_leaf_22_reg <= dout_leaf_22_reg; 
+        end
+        else begin
+            dout_leaf_22_reg <= dout_leaf_22; 
+        end
+
+        if(resend_23) begin
+            dout_leaf_23_reg <= dout_leaf_23_reg; 
+        end
+        else begin
+            dout_leaf_23_reg <= dout_leaf_23; 
+        end
+
 end
+
+//always @ (posedge ap_clk) begin
+//        dout_leaf_0_reg <= {tvalid3, tdata3[47:0]};
+//        dout_leaf_1_reg <= dout_leaf_1; 
+//        dout_leaf_2_reg <= dout_leaf_2; 
+//        dout_leaf_3_reg <= dout_leaf_3; 
+//        dout_leaf_4_reg <= dout_leaf_4; 
+//        dout_leaf_5_reg <= dout_leaf_5; 
+//        dout_leaf_6_reg <= dout_leaf_6; 
+//        dout_leaf_7_reg <= dout_leaf_7; 
+//        dout_leaf_8_reg <= dout_leaf_8; 
+//        dout_leaf_9_reg <= dout_leaf_9; 
+//        dout_leaf_10_reg <= dout_leaf_10; 
+//        dout_leaf_11_reg <= dout_leaf_11; 
+//        dout_leaf_12_reg <= dout_leaf_12; 
+//        dout_leaf_13_reg <= dout_leaf_13; 
+//        dout_leaf_14_reg <= dout_leaf_14; 
+//        dout_leaf_15_reg <= dout_leaf_15; 
+//        dout_leaf_16_reg <= dout_leaf_16; 
+//        dout_leaf_17_reg <= dout_leaf_17; 
+//        dout_leaf_18_reg <= dout_leaf_18; 
+//        dout_leaf_19_reg <= dout_leaf_19; 
+//        dout_leaf_20_reg <= dout_leaf_20; 
+//        dout_leaf_21_reg <= dout_leaf_21; 
+//        dout_leaf_22_reg <= dout_leaf_22; 
+//        dout_leaf_23_reg <= dout_leaf_23; 
+//end
+
 
 always @ (posedge ap_clk) begin
         din_leaf_1_reg <= din_leaf_1_bft;
@@ -601,32 +769,32 @@ always @ (posedge ap_clk) begin
         din_leaf_23_reg <= din_leaf_23_bft; 
 end
 
-always @ (posedge ap_clk) begin
-        resend_0_reg <= resend_0_bft;
-        resend_1_reg <= resend_1_bft;
-        resend_2_reg <= resend_2_bft; 
-        resend_3_reg <= resend_3_bft; 
-        resend_4_reg <= resend_4_bft; 
-        resend_5_reg <= resend_5_bft; 
-        resend_6_reg <= resend_6_bft; 
-        resend_7_reg <= resend_7_bft; 
-        resend_8_reg <= resend_8_bft; 
-        resend_9_reg <= resend_9_bft; 
-        resend_10_reg <= resend_10_bft; 
-        resend_11_reg <= resend_11_bft; 
-        resend_12_reg <= resend_12_bft; 
-        resend_13_reg <= resend_13_bft; 
-        resend_14_reg <= resend_14_bft; 
-        resend_15_reg <= resend_15_bft; 
-        resend_16_reg <= resend_16_bft; 
-        resend_17_reg <= resend_17_bft; 
-        resend_18_reg <= resend_18_bft; 
-        resend_19_reg <= resend_19_bft; 
-        resend_20_reg <= resend_20_bft; 
-        resend_21_reg <= resend_21_bft; 
-        resend_22_reg <= resend_22_bft; 
-        resend_23_reg <= resend_23_bft; 
-end
+// always @ (posedge ap_clk) begin
+//        resend_0_reg <= resend_0_bft;
+//        resend_1_reg <= resend_1_bft;
+//        resend_2_reg <= resend_2_bft; 
+//        resend_3_reg <= resend_3_bft; 
+//        resend_4_reg <= resend_4_bft; 
+//        resend_5_reg <= resend_5_bft; 
+//        resend_6_reg <= resend_6_bft; 
+//        resend_7_reg <= resend_7_bft; 
+//        resend_8_reg <= resend_8_bft; 
+//        resend_9_reg <= resend_9_bft; 
+//        resend_10_reg <= resend_10_bft; 
+//        resend_11_reg <= resend_11_bft; 
+//        resend_12_reg <= resend_12_bft; 
+//        resend_13_reg <= resend_13_bft; 
+//        resend_14_reg <= resend_14_bft; 
+//        resend_15_reg <= resend_15_bft; 
+//        resend_16_reg <= resend_16_bft; 
+//        resend_17_reg <= resend_17_bft; 
+//        resend_18_reg <= resend_18_bft; 
+//        resend_19_reg <= resend_19_bft; 
+//        resend_20_reg <= resend_20_bft; 
+//        resend_21_reg <= resend_21_bft; 
+//        resend_22_reg <= resend_22_bft; 
+//        resend_23_reg <= resend_23_bft; 
+// end
 
 
 bft bft_inst(
@@ -696,38 +864,73 @@ bft bft_inst(
     .din_leaf_29(din_leaf_29_bft),
     .din_leaf_30(din_leaf_30_bft),
     .din_leaf_31(din_leaf_31_bft),
-    .resend_0(resend_0_bft),
-    .resend_1(resend_1_bft),
-    .resend_2(resend_2_bft),
-    .resend_3(resend_3_bft),
-    .resend_4(resend_4_bft),
-    .resend_5(resend_5_bft),
-    .resend_6(resend_6_bft),
-    .resend_7(resend_7_bft),
-    .resend_8(resend_8_bft),
-    .resend_9(resend_9_bft),
-    .resend_10(resend_10_bft),
-    .resend_11(resend_11_bft),
-    .resend_12(resend_12_bft),
-    .resend_13(resend_13_bft),
-    .resend_14(resend_14_bft),
-    .resend_15(resend_15_bft),
-    .resend_16(resend_16_bft),
-    .resend_17(resend_17_bft),
-    .resend_18(resend_18_bft),
-    .resend_19(resend_19_bft),
-    .resend_20(resend_20_bft),
-    .resend_21(resend_21_bft),
-    .resend_22(resend_22_bft),
-    .resend_23(resend_23_bft),
-    .resend_24(resend_24_bft),
-    .resend_25(resend_25_bft),
-    .resend_26(resend_26_bft),
-    .resend_27(resend_27_bft),
-    .resend_28(resend_28_bft),
-    .resend_29(resend_29_bft),
-    .resend_30(resend_30_bft),
-    .resend_31(resend_31_bft)
+   // .resend_0(resend_0_bft),
+   // .resend_1(resend_1_bft),
+   // .resend_2(resend_2_bft),
+   // .resend_3(resend_3_bft),
+   // .resend_4(resend_4_bft),
+   // .resend_5(resend_5_bft),
+   // .resend_6(resend_6_bft),
+   // .resend_7(resend_7_bft),
+   // .resend_8(resend_8_bft),
+   // .resend_9(resend_9_bft),
+   // .resend_10(resend_10_bft),
+   // .resend_11(resend_11_bft),
+   // .resend_12(resend_12_bft),
+   // .resend_13(resend_13_bft),
+   // .resend_14(resend_14_bft),
+   // .resend_15(resend_15_bft),
+   // .resend_16(resend_16_bft),
+   // .resend_17(resend_17_bft),
+   // .resend_18(resend_18_bft),
+   // .resend_19(resend_19_bft),
+   // .resend_20(resend_20_bft),
+   // .resend_21(resend_21_bft),
+   // .resend_22(resend_22_bft),
+   // .resend_23(resend_23_bft),
+   // .resend_24(resend_24_bft),
+   // .resend_25(resend_25_bft),
+   // .resend_26(resend_26_bft),
+   // .resend_27(resend_27_bft),
+   // .resend_28(resend_28_bft),
+   // .resend_29(resend_29_bft),
+   // .resend_30(resend_30_bft),
+   // .resend_31(resend_31_bft)
+
+    .resend_0(resend_0),
+    .resend_1(resend_1),
+    .resend_2(resend_2),
+    .resend_3(resend_3),
+    .resend_4(resend_4),
+    .resend_5(resend_5),
+    .resend_6(resend_6),
+    .resend_7(resend_7),
+    .resend_8(resend_8),
+    .resend_9(resend_9),
+    .resend_10(resend_10),
+    .resend_11(resend_11),
+    .resend_12(resend_12),
+    .resend_13(resend_13),
+    .resend_14(resend_14),
+    .resend_15(resend_15),
+    .resend_16(resend_16),
+    .resend_17(resend_17),
+    .resend_18(resend_18),
+    .resend_19(resend_19),
+    .resend_20(resend_20),
+    .resend_21(resend_21),
+    .resend_22(resend_22),
+    .resend_23(resend_23),
+    .resend_24(resend_24),
+    .resend_25(resend_25),
+    .resend_26(resend_26),
+    .resend_27(resend_27),
+    .resend_28(resend_28),
+    .resend_29(resend_29),
+    .resend_30(resend_30),
+    .resend_31(resend_31)
+
+
     );
 
 
@@ -749,6 +952,22 @@ page_3 page3_inst(
     .reset(ap_rst_n_inv),
     .ap_start(ap_start)
     );
+
+//page_2_double page2_inst(
+//    .clk_0(ap_clk),
+//    .din_leaf_bft2interface_0(din_leaf_2),
+//    .dout_leaf_interface2bft_0(dout_leaf_2),
+//    .resend_0(resend_2),
+//    .reset_0(ap_rst_n_inv),
+//    .ap_start_0(ap_start),
+
+//    .clk_1(ap_clk),
+//    .din_leaf_bft2interface_1(din_leaf_3),
+//    .dout_leaf_interface2bft_1(dout_leaf_3),
+//    .resend_1(resend_3),
+//    .reset_1(ap_rst_n_inv),
+//    .ap_start_1(ap_start)
+//);
  
  page_4 page4_inst(
     .clk(ap_clk),
@@ -759,7 +978,7 @@ page_3 page3_inst(
     .ap_start(ap_start)
     );
     
- page_5 page5_inst(
+ page page5_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_5),
     .dout_leaf_interface2bft(dout_leaf_5),
@@ -777,7 +996,7 @@ page_3 page3_inst(
     .ap_start(ap_start)
     );
     
-page_7 page7_inst(
+page page7_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_7),
     .dout_leaf_interface2bft(dout_leaf_7),
@@ -786,7 +1005,7 @@ page_7 page7_inst(
     .ap_start(ap_start)
     );
     
-page_8 page8_inst(
+page page8_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_8),
     .dout_leaf_interface2bft(dout_leaf_8),
@@ -795,7 +1014,7 @@ page_8 page8_inst(
     .ap_start(ap_start)
     );
 
-page_9 page9_inst(
+page page9_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_9),
     .dout_leaf_interface2bft(dout_leaf_9),
@@ -813,7 +1032,7 @@ page page10_inst(
     .ap_start(ap_start)
     );    
     
-page_11 page11_inst(
+page page11_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_11),
     .dout_leaf_interface2bft(dout_leaf_11),
@@ -822,7 +1041,7 @@ page_11 page11_inst(
     .ap_start(ap_start)
     );    
     
-page_12 page12_inst(
+page page12_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_12),
     .dout_leaf_interface2bft(dout_leaf_12),
@@ -840,7 +1059,7 @@ page page13_inst(
     .ap_start(ap_start)
     );    
 
-page_14 page14_inst(
+page page14_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_14),
     .dout_leaf_interface2bft(dout_leaf_14),
@@ -849,7 +1068,7 @@ page_14 page14_inst(
     .ap_start(ap_start)
     );  
       
-page_15 page15_inst(
+page page15_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_15),
     .dout_leaf_interface2bft(dout_leaf_15),
@@ -858,7 +1077,7 @@ page_15 page15_inst(
     .ap_start(ap_start)
     );    
     
-page page16_inst(
+page_16 page16_inst(
     .clk(ap_clk),
     .din_leaf_bft2interface(din_leaf_16),
     .dout_leaf_interface2bft(dout_leaf_16),
@@ -872,6 +1091,61 @@ page page17_inst(
     .din_leaf_bft2interface(din_leaf_17),
     .dout_leaf_interface2bft(dout_leaf_17),
     .resend(resend_17),
+    .reset(ap_rst_n_inv),
+    .ap_start(ap_start)
+    );
+
+page_18 page18_inst(
+    .clk(ap_clk),
+    .din_leaf_bft2interface(din_leaf_18),
+    .dout_leaf_interface2bft(dout_leaf_18),
+    .resend(resend_18),
+    .reset(ap_rst_n_inv),
+    .ap_start(ap_start)
+    );
+
+page page19_inst(
+    .clk(ap_clk),
+    .din_leaf_bft2interface(din_leaf_19),
+    .dout_leaf_interface2bft(dout_leaf_19),
+    .resend(resend_19),
+    .reset(ap_rst_n_inv),
+    .ap_start(ap_start)
+    );
+
+
+page_20 page20_inst(
+    .clk(ap_clk),
+    .din_leaf_bft2interface(din_leaf_20),
+    .dout_leaf_interface2bft(dout_leaf_20),
+    .resend(resend_20),
+    .reset(ap_rst_n_inv),
+    .ap_start(ap_start)
+    );
+
+page page21_inst(
+    .clk(ap_clk),
+    .din_leaf_bft2interface(din_leaf_21),
+    .dout_leaf_interface2bft(dout_leaf_21),
+    .resend(resend_21),
+    .reset(ap_rst_n_inv),
+    .ap_start(ap_start)
+    );
+
+page page22_inst(
+    .clk(ap_clk),
+    .din_leaf_bft2interface(din_leaf_22),
+    .dout_leaf_interface2bft(dout_leaf_22),
+    .resend(resend_22),
+    .reset(ap_rst_n_inv),
+    .ap_start(ap_start)
+    );
+
+page page23_inst(
+    .clk(ap_clk),
+    .din_leaf_bft2interface(din_leaf_23),
+    .dout_leaf_interface2bft(dout_leaf_23),
+    .resend(resend_23),
     .reset(ap_rst_n_inv),
     .ap_start(ap_start)
     );
