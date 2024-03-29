@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'data_gen_config'
 ================================================================
-* Date:           Fri Mar 29 00:12:17 2024
+* Date:           Fri Mar 29 11:32:08 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        data_gen_hls_prj
@@ -109,7 +109,7 @@ State 7 <SV = 6> <Delay = 1.23>
 ST_7 : Operation 21 [1/2] (1.23ns)   --->   "%call_ln0 = call void @data_gen_config_Pipeline_data_gen_label0, i512 %Output_2, i8 %triangle_3ds_x0_V, i8 %triangle_3ds_y0_V, i8 %triangle_3ds_z0_V, i8 %triangle_3ds_x1_V, i8 %triangle_3ds_y1_V, i8 %triangle_3ds_z1_V, i8 %triangle_3ds_x2_V, i8 %triangle_3ds_y2_V, i8 %triangle_3ds_z2_V"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%spectopmodule_ln12 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [data_gen_rendering_src/data_gen_is_done.cpp:12]   --->   Operation 22 'spectopmodule' 'spectopmodule_ln12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%spectopmodule_ln13 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [data_gen_rendering_src/data_gen_is_done.cpp:13]   --->   Operation 22 'spectopmodule' 'spectopmodule_ln13' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %Output_1, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %Output_1"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %Output_2, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>

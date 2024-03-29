@@ -2,8 +2,8 @@
 <pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint()" off="0" region="0" recursive="0"/>
 <pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint(int)" off="0" region="0" recursive="0"/>
 <pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_common.h" line="567" pragmaType="inline" parentfunction="ssdm_int<8, false>::ssdm_int(unsigned char)" off="0" region="0" recursive="0"/>
-<pragma file="data_gen_rendering_src/data_gen_is_done.cpp" line="15" pragmaType="interface" parentfunction="data_gen_config" mode="axis" port="Output_1" register="1" register_mode="both" name="" depth="-1"/>
-<pragma file="data_gen_rendering_src/data_gen_is_done.cpp" line="16" pragmaType="interface" parentfunction="data_gen_config" mode="axis" port="Output_2" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="data_gen_rendering_src/data_gen_is_done.cpp" line="16" pragmaType="interface" parentfunction="data_gen_config" mode="axis" port="Output_1" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="data_gen_rendering_src/data_gen_is_done.cpp" line="17" pragmaType="interface" parentfunction="data_gen_config" mode="axis" port="Output_2" register="1" register_mode="both" name="" depth="-1"/>
 <pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint()" off="0" region="0" recursive="0"/>
 <pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="1091" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
 <pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>& ap_range_ref<512, false>::operator=<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>

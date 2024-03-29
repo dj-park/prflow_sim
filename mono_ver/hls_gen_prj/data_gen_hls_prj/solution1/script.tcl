@@ -5,13 +5,13 @@
 ############################################################
 open_project data_gen_hls_prj
 set_top data_gen_config
-add_files data_gen_rendering_src/data_gen_is_done.cpp
-add_files data_gen_rendering_src/input_data.h
 add_files data_gen_rendering_src/typedefs.h
+add_files data_gen_rendering_src/input_data.h
+add_files data_gen_rendering_src/data_gen_is_done.cpp
 open_solution "solution1" -flow_target vivado
 set_part {xczu9eg-ffvb1156-2-e}
 create_clock -period 5 -name default
-#source "./data_gen_hls_prj/solution1/directives.tcl"
+source "./data_gen_hls_prj/solution1/directives.tcl"
 #csim_design
 csynth_design
 #cosim_design

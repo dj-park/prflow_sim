@@ -1,6 +1,7 @@
 #include "./typedefs.h"
 #include "input_data.h"
 
+
 #define CONFIG_SIZE 1
 #define INPUT_SIZE (NUM_3D_TRI/4)
 #define NUM_IS_DONE 7
@@ -33,7 +34,6 @@ void data_gen_config(
     tmp1.range(63, 32) = 0x00000000;
     tmp1.range(31,  0) = NUM_TOTAL_CNT;
     Output_1.write(tmp1);
-
 
     tmp2 = 0;
     data_gen_label0: 

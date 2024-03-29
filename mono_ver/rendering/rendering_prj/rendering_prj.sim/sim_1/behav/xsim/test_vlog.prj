@@ -25,7 +25,6 @@ verilog xil_defaultlib  \
 "../../../../../src/verilog/mono.v" \
 "../../../../../src/hls_gen/applications/output_data.v" \
 "../../../../../src/hls_gen/applications/output_data_flow_control_loop_pipe.v" \
-"../../../../../src/hls_gen/applications/output_data_regslice_both.v" \
 "../../../../../src/hls_gen/applications/prj_rast1.v" \
 "../../../../../src/hls_gen/applications/prj_rast1_data_transfer.v" \
 "../../../../../src/hls_gen/applications/prj_rast1_fifo_w128_d2_S.v" \

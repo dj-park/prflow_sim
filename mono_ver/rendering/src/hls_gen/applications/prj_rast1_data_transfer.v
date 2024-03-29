@@ -69,7 +69,7 @@ reg    data_transfer_out_blk_n;
 wire    ap_CS_fsm_state2;
 wire   [127:0] trunc_ln404_fu_201_p1;
 reg   [127:0] trunc_ln404_reg_234;
-wire   [7:0] select_ln85_fu_217_p3;
+wire   [7:0] select_ln84_fu_217_p3;
 reg    ap_block_state1;
 reg   [255:0] ap_sig_allocacmp_p_Val2_s;
 wire   [14:0] Lo_fu_81_p3;
@@ -160,7 +160,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1) | ((icmp_ln1065_fu_65_p2 == 1'd1) & (1'b0 == Input_1_TVALID_int_regslice))) & (1'b1 == ap_CS_fsm_state1))) begin
-        counter_V <= select_ln85_fu_217_p3;
+        counter_V <= select_ln84_fu_217_p3;
     end
 end
 
@@ -332,7 +332,7 @@ assign select_ln674_2_fu_161_p3 = ((icmp_ln674_fu_99_p2[0:0] == 1'b1) ? sub_ln67
 
 assign select_ln674_fu_145_p3 = ((icmp_ln674_fu_99_p2[0:0] == 1'b1) ? sub_ln674_fu_127_p2 : sub_ln674_2_fu_139_p2);
 
-assign select_ln85_fu_217_p3 = ((icmp_ln1065_1_fu_205_p2[0:0] == 1'b1) ? 8'd0 : add_ln886_fu_211_p2);
+assign select_ln84_fu_217_p3 = ((icmp_ln1065_1_fu_205_p2[0:0] == 1'b1) ? 8'd0 : add_ln886_fu_211_p2);
 
 assign start_out = real_start;
 

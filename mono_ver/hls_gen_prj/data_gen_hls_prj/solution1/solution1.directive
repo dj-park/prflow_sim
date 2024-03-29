@@ -5,6 +5,11 @@
                 <option name="name" value="data_gen_config"/>
             </pragma>
         </directive>
+        <directive functionName="data_gen_config" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="data_gen_config"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

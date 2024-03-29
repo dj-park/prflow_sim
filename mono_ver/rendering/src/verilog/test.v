@@ -126,29 +126,8 @@ initial begin
     #PERIOD_300
     ap_start = 0;
     
-    #2308200
-// //    full_cnt_ready = 0;
-// //    #10
-// //    full_cnt_ready = 1;
-// //    #40
-// //    full_cnt_ready = 0;
-// //    #10
-// //    full_cnt_ready = 1;
-// //    #10
-// //    full_cnt_ready = 0;
-// //    #250    
-// //    full_cnt_ready = 1;
-
-     #1500000
+    #5000000
     $fclose(fd);
-
-//     select = 2;
-//     #10
-//     ap_start = 1;
-//     #PERIOD_BFT
-//     ap_start = 0;
-
-//     #4000000
 
     $stop();
 

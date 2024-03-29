@@ -9108,13 +9108,17 @@ Triangle_3D triangle_3ds[3192] = {
 {0, 136, 83, 0, 134, 91, 0, 147, 92}
 };
 # 3 "data_gen_rendering_src/data_gen_is_done.cpp" 2
-# 12 "data_gen_rendering_src/data_gen_is_done.cpp"
+# 13 "data_gen_rendering_src/data_gen_is_done.cpp"
 __attribute__((sdx_kernel("data_gen_config", 0))) void data_gen_config(
           hls::stream<ap_uint<64> > & Output_1,
           hls::stream<ap_uint<512> > & Output_2){
 #line 15 "/home/dopark/workspace/prflow_sim/mono_ver/hls_gen_prj/data_gen_hls_prj/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=data_gen_config
-# 14 "data_gen_rendering_src/data_gen_is_done.cpp"
+# 15 "data_gen_rendering_src/data_gen_is_done.cpp"
+
+#line 6 "/home/dopark/workspace/prflow_sim/mono_ver/hls_gen_prj/data_gen_hls_prj/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=data_gen_config
+# 15 "data_gen_rendering_src/data_gen_is_done.cpp"
 
 #pragma HLS INTERFACE axis register_mode=both register port=Output_1
 #pragma HLS INTERFACE axis register_mode=both register port=Output_2
@@ -9137,7 +9141,6 @@ __attribute__((sdx_kernel("data_gen_config", 0))) void data_gen_config(
     tmp1.range(63, 32) = 0x00000000;
     tmp1.range(31, 0) = 24;
     Output_1.write(tmp1);
-
 
     tmp2 = 0;
     data_gen_label0:

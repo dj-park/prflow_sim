@@ -50,9 +50,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/m
 INFO: [VRFC 10-311] analyzing module output_data
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/output_data_flow_control_loop_pipe.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module output_data_flow_control_loop_pipe
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/output_data_regslice_both.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module output_data_regslice_both
-INFO: [VRFC 10-311] analyzing module output_data_regslice_both_w1
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module prj_rast1
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_data_transfer.v" into library xil_defaultlib
@@ -131,5 +128,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/m
 INFO: [VRFC 10-311] analyzing module zculling_i1_zculling_i1_Pipeline_ZCULLING_INIT_ROW
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/rendering_prj/rendering_prj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
