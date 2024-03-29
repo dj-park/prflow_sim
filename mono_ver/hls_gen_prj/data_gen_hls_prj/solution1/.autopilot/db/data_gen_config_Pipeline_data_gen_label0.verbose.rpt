@@ -1,0 +1,2928 @@
+
+
+================================================================
+== Vitis HLS Report for 'data_gen_config_Pipeline_data_gen_label0'
+================================================================
+* Date:           Fri Mar 29 00:12:17 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        data_gen_hls_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.339 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      800|      800|  4.000 us|  4.000 us|  800|  800|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- data_gen_label0  |      798|      798|         2|          1|          1|   798|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      68|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |       54|     -|       0|       0|    -|
+|Multiplexer      |        -|     -|       -|      45|    -|
+|Register         |        -|     -|      13|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       54|     0|      13|     113|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        2|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |        Memory       |                                 Module                                 | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |triangle_3ds_x0_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_x1_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_x2_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_y0_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_y1_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_y2_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_z0_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_z1_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_z2_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                |                                                                        |       54|  0|   0|    0| 28728|   72|     9|       229824|
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln40_fu_538_p2         |         +|   0|  0|  17|          10|           1|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln40_fu_532_p2        |      icmp|   0|  0|  11|          10|           9|
+    |or_ln52_fu_565_p2          |        or|   0|  0|  12|          12|           1|
+    |or_ln63_fu_584_p2          |        or|   0|  0|  12|          12|           2|
+    |or_ln74_fu_603_p2          |        or|   0|  0|  12|          12|           2|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  68|          58|          18|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |Output_2_TDATA_blk_n     |   9|          2|    1|          2|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|   10|         20|
+    |i_fu_72                  |   9|          2|   10|         20|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   23|         46|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_72                  |  10|   0|   10|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  13|   0|   13|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+------------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |               Source Object              |    C Type    |
++-----------------+-----+-----+------------+------------------------------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|Output_2_TREADY  |   in|    1|        axis|                                  Output_2|       pointer|
+|Output_2_TDATA   |  out|  512|        axis|                                  Output_2|       pointer|
+|Output_2_TVALID  |  out|    1|        axis|                                  Output_2|       pointer|
++-----------------+-----+-----+------------+------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.33>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %Output_2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln0 = store i10 0, i10 %i"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i_1 = load i10 %i" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 9 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 10 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.91ns)   --->   "%icmp_ln40 = icmp_eq  i10 %i_1, i10 798" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 11 'icmp' 'icmp_ln40' <Predicate = true> <Delay = 0.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 798, i64 798, i64 798"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.78ns)   --->   "%add_ln40 = add i10 %i_1, i10 1" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 13 'add' 'add_ln40' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln40 = br i1 %icmp_ln40, void %for.inc.split, void %for.end.exitStub" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 14 'br' 'br_ln40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i10.i2, i10 %i_1, i2 0" [data_gen_rendering_src/data_gen_is_done.cpp:41]   --->   Operation 15 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln232 = zext i12 %shl_ln"   --->   Operation 16 'zext' 'zext_ln232' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%triangle_3ds_x0_V_addr = getelementptr i8 %triangle_3ds_x0_V, i64 0, i64 %zext_ln232"   --->   Operation 17 'getelementptr' 'triangle_3ds_x0_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load = load i12 %triangle_3ds_x0_V_addr"   --->   Operation 18 'load' 'triangle_3ds_x0_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%triangle_3ds_y0_V_addr = getelementptr i8 %triangle_3ds_y0_V, i64 0, i64 %zext_ln232"   --->   Operation 19 'getelementptr' 'triangle_3ds_y0_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load = load i12 %triangle_3ds_y0_V_addr"   --->   Operation 20 'load' 'triangle_3ds_y0_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%triangle_3ds_z0_V_addr = getelementptr i8 %triangle_3ds_z0_V, i64 0, i64 %zext_ln232"   --->   Operation 21 'getelementptr' 'triangle_3ds_z0_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load = load i12 %triangle_3ds_z0_V_addr"   --->   Operation 22 'load' 'triangle_3ds_z0_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%triangle_3ds_x1_V_addr = getelementptr i8 %triangle_3ds_x1_V, i64 0, i64 %zext_ln232"   --->   Operation 23 'getelementptr' 'triangle_3ds_x1_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 24 [2/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load = load i12 %triangle_3ds_x1_V_addr"   --->   Operation 24 'load' 'triangle_3ds_x1_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%triangle_3ds_y1_V_addr = getelementptr i8 %triangle_3ds_y1_V, i64 0, i64 %zext_ln232"   --->   Operation 25 'getelementptr' 'triangle_3ds_y1_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load = load i12 %triangle_3ds_y1_V_addr"   --->   Operation 26 'load' 'triangle_3ds_y1_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%triangle_3ds_z1_V_addr = getelementptr i8 %triangle_3ds_z1_V, i64 0, i64 %zext_ln232"   --->   Operation 27 'getelementptr' 'triangle_3ds_z1_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 28 [2/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load = load i12 %triangle_3ds_z1_V_addr"   --->   Operation 28 'load' 'triangle_3ds_z1_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%triangle_3ds_x2_V_addr = getelementptr i8 %triangle_3ds_x2_V, i64 0, i64 %zext_ln232"   --->   Operation 29 'getelementptr' 'triangle_3ds_x2_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 30 [2/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load = load i12 %triangle_3ds_x2_V_addr"   --->   Operation 30 'load' 'triangle_3ds_x2_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%triangle_3ds_y2_V_addr = getelementptr i8 %triangle_3ds_y2_V, i64 0, i64 %zext_ln232"   --->   Operation 31 'getelementptr' 'triangle_3ds_y2_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 32 [2/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load = load i12 %triangle_3ds_y2_V_addr"   --->   Operation 32 'load' 'triangle_3ds_y2_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%triangle_3ds_z2_V_addr = getelementptr i8 %triangle_3ds_z2_V, i64 0, i64 %zext_ln232"   --->   Operation 33 'getelementptr' 'triangle_3ds_z2_V_addr' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 34 [2/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load = load i12 %triangle_3ds_z2_V_addr"   --->   Operation 34 'load' 'triangle_3ds_z2_V_load' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%or_ln52 = or i12 %shl_ln, i12 1" [data_gen_rendering_src/data_gen_is_done.cpp:52]   --->   Operation 35 'or' 'or_ln52' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln232_1 = zext i12 %or_ln52"   --->   Operation 36 'zext' 'zext_ln232_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%triangle_3ds_x0_V_addr_1 = getelementptr i8 %triangle_3ds_x0_V, i64 0, i64 %zext_ln232_1"   --->   Operation 37 'getelementptr' 'triangle_3ds_x0_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 38 [2/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load_1 = load i12 %triangle_3ds_x0_V_addr_1"   --->   Operation 38 'load' 'triangle_3ds_x0_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%triangle_3ds_y0_V_addr_1 = getelementptr i8 %triangle_3ds_y0_V, i64 0, i64 %zext_ln232_1"   --->   Operation 39 'getelementptr' 'triangle_3ds_y0_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 40 [2/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load_1 = load i12 %triangle_3ds_y0_V_addr_1"   --->   Operation 40 'load' 'triangle_3ds_y0_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%triangle_3ds_z0_V_addr_1 = getelementptr i8 %triangle_3ds_z0_V, i64 0, i64 %zext_ln232_1"   --->   Operation 41 'getelementptr' 'triangle_3ds_z0_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 42 [2/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load_1 = load i12 %triangle_3ds_z0_V_addr_1"   --->   Operation 42 'load' 'triangle_3ds_z0_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%triangle_3ds_x1_V_addr_1 = getelementptr i8 %triangle_3ds_x1_V, i64 0, i64 %zext_ln232_1"   --->   Operation 43 'getelementptr' 'triangle_3ds_x1_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 44 [2/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load_1 = load i12 %triangle_3ds_x1_V_addr_1"   --->   Operation 44 'load' 'triangle_3ds_x1_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%triangle_3ds_y1_V_addr_1 = getelementptr i8 %triangle_3ds_y1_V, i64 0, i64 %zext_ln232_1"   --->   Operation 45 'getelementptr' 'triangle_3ds_y1_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 46 [2/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load_1 = load i12 %triangle_3ds_y1_V_addr_1"   --->   Operation 46 'load' 'triangle_3ds_y1_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%triangle_3ds_z1_V_addr_1 = getelementptr i8 %triangle_3ds_z1_V, i64 0, i64 %zext_ln232_1"   --->   Operation 47 'getelementptr' 'triangle_3ds_z1_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 48 [2/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load_1 = load i12 %triangle_3ds_z1_V_addr_1"   --->   Operation 48 'load' 'triangle_3ds_z1_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%triangle_3ds_x2_V_addr_1 = getelementptr i8 %triangle_3ds_x2_V, i64 0, i64 %zext_ln232_1"   --->   Operation 49 'getelementptr' 'triangle_3ds_x2_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 50 [2/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load_1 = load i12 %triangle_3ds_x2_V_addr_1"   --->   Operation 50 'load' 'triangle_3ds_x2_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%triangle_3ds_y2_V_addr_1 = getelementptr i8 %triangle_3ds_y2_V, i64 0, i64 %zext_ln232_1"   --->   Operation 51 'getelementptr' 'triangle_3ds_y2_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 52 [2/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load_1 = load i12 %triangle_3ds_y2_V_addr_1"   --->   Operation 52 'load' 'triangle_3ds_y2_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%triangle_3ds_z2_V_addr_1 = getelementptr i8 %triangle_3ds_z2_V, i64 0, i64 %zext_ln232_1"   --->   Operation 53 'getelementptr' 'triangle_3ds_z2_V_addr_1' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 54 [2/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load_1 = load i12 %triangle_3ds_z2_V_addr_1"   --->   Operation 54 'load' 'triangle_3ds_z2_V_load_1' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%or_ln63 = or i12 %shl_ln, i12 2" [data_gen_rendering_src/data_gen_is_done.cpp:63]   --->   Operation 55 'or' 'or_ln63' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln232_2 = zext i12 %or_ln63"   --->   Operation 56 'zext' 'zext_ln232_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%triangle_3ds_x0_V_addr_2 = getelementptr i8 %triangle_3ds_x0_V, i64 0, i64 %zext_ln232_2"   --->   Operation 57 'getelementptr' 'triangle_3ds_x0_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 58 [2/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load_2 = load i12 %triangle_3ds_x0_V_addr_2"   --->   Operation 58 'load' 'triangle_3ds_x0_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%triangle_3ds_y0_V_addr_2 = getelementptr i8 %triangle_3ds_y0_V, i64 0, i64 %zext_ln232_2"   --->   Operation 59 'getelementptr' 'triangle_3ds_y0_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 60 [2/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load_2 = load i12 %triangle_3ds_y0_V_addr_2"   --->   Operation 60 'load' 'triangle_3ds_y0_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%triangle_3ds_z0_V_addr_2 = getelementptr i8 %triangle_3ds_z0_V, i64 0, i64 %zext_ln232_2"   --->   Operation 61 'getelementptr' 'triangle_3ds_z0_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 62 [2/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load_2 = load i12 %triangle_3ds_z0_V_addr_2"   --->   Operation 62 'load' 'triangle_3ds_z0_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%triangle_3ds_x1_V_addr_2 = getelementptr i8 %triangle_3ds_x1_V, i64 0, i64 %zext_ln232_2"   --->   Operation 63 'getelementptr' 'triangle_3ds_x1_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 64 [2/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load_2 = load i12 %triangle_3ds_x1_V_addr_2"   --->   Operation 64 'load' 'triangle_3ds_x1_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%triangle_3ds_y1_V_addr_2 = getelementptr i8 %triangle_3ds_y1_V, i64 0, i64 %zext_ln232_2"   --->   Operation 65 'getelementptr' 'triangle_3ds_y1_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 66 [2/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load_2 = load i12 %triangle_3ds_y1_V_addr_2"   --->   Operation 66 'load' 'triangle_3ds_y1_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%triangle_3ds_z1_V_addr_2 = getelementptr i8 %triangle_3ds_z1_V, i64 0, i64 %zext_ln232_2"   --->   Operation 67 'getelementptr' 'triangle_3ds_z1_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 68 [2/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load_2 = load i12 %triangle_3ds_z1_V_addr_2"   --->   Operation 68 'load' 'triangle_3ds_z1_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%triangle_3ds_x2_V_addr_2 = getelementptr i8 %triangle_3ds_x2_V, i64 0, i64 %zext_ln232_2"   --->   Operation 69 'getelementptr' 'triangle_3ds_x2_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 70 [2/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load_2 = load i12 %triangle_3ds_x2_V_addr_2"   --->   Operation 70 'load' 'triangle_3ds_x2_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%triangle_3ds_y2_V_addr_2 = getelementptr i8 %triangle_3ds_y2_V, i64 0, i64 %zext_ln232_2"   --->   Operation 71 'getelementptr' 'triangle_3ds_y2_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 72 [2/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load_2 = load i12 %triangle_3ds_y2_V_addr_2"   --->   Operation 72 'load' 'triangle_3ds_y2_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%triangle_3ds_z2_V_addr_2 = getelementptr i8 %triangle_3ds_z2_V, i64 0, i64 %zext_ln232_2"   --->   Operation 73 'getelementptr' 'triangle_3ds_z2_V_addr_2' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 74 [2/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load_2 = load i12 %triangle_3ds_z2_V_addr_2"   --->   Operation 74 'load' 'triangle_3ds_z2_V_load_2' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%or_ln74 = or i12 %shl_ln, i12 3" [data_gen_rendering_src/data_gen_is_done.cpp:74]   --->   Operation 75 'or' 'or_ln74' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln232_3 = zext i12 %or_ln74"   --->   Operation 76 'zext' 'zext_ln232_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%triangle_3ds_x0_V_addr_3 = getelementptr i8 %triangle_3ds_x0_V, i64 0, i64 %zext_ln232_3"   --->   Operation 77 'getelementptr' 'triangle_3ds_x0_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 78 [2/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load_3 = load i12 %triangle_3ds_x0_V_addr_3"   --->   Operation 78 'load' 'triangle_3ds_x0_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%triangle_3ds_y0_V_addr_3 = getelementptr i8 %triangle_3ds_y0_V, i64 0, i64 %zext_ln232_3"   --->   Operation 79 'getelementptr' 'triangle_3ds_y0_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 80 [2/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load_3 = load i12 %triangle_3ds_y0_V_addr_3"   --->   Operation 80 'load' 'triangle_3ds_y0_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%triangle_3ds_z0_V_addr_3 = getelementptr i8 %triangle_3ds_z0_V, i64 0, i64 %zext_ln232_3"   --->   Operation 81 'getelementptr' 'triangle_3ds_z0_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 82 [2/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load_3 = load i12 %triangle_3ds_z0_V_addr_3"   --->   Operation 82 'load' 'triangle_3ds_z0_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%triangle_3ds_x1_V_addr_3 = getelementptr i8 %triangle_3ds_x1_V, i64 0, i64 %zext_ln232_3"   --->   Operation 83 'getelementptr' 'triangle_3ds_x1_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 84 [2/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load_3 = load i12 %triangle_3ds_x1_V_addr_3"   --->   Operation 84 'load' 'triangle_3ds_x1_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%triangle_3ds_y1_V_addr_3 = getelementptr i8 %triangle_3ds_y1_V, i64 0, i64 %zext_ln232_3"   --->   Operation 85 'getelementptr' 'triangle_3ds_y1_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 86 [2/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load_3 = load i12 %triangle_3ds_y1_V_addr_3"   --->   Operation 86 'load' 'triangle_3ds_y1_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%triangle_3ds_z1_V_addr_3 = getelementptr i8 %triangle_3ds_z1_V, i64 0, i64 %zext_ln232_3"   --->   Operation 87 'getelementptr' 'triangle_3ds_z1_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 88 [2/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load_3 = load i12 %triangle_3ds_z1_V_addr_3"   --->   Operation 88 'load' 'triangle_3ds_z1_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%triangle_3ds_x2_V_addr_3 = getelementptr i8 %triangle_3ds_x2_V, i64 0, i64 %zext_ln232_3"   --->   Operation 89 'getelementptr' 'triangle_3ds_x2_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 90 [2/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load_3 = load i12 %triangle_3ds_x2_V_addr_3"   --->   Operation 90 'load' 'triangle_3ds_x2_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%triangle_3ds_y2_V_addr_3 = getelementptr i8 %triangle_3ds_y2_V, i64 0, i64 %zext_ln232_3"   --->   Operation 91 'getelementptr' 'triangle_3ds_y2_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 92 [2/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load_3 = load i12 %triangle_3ds_y2_V_addr_3"   --->   Operation 92 'load' 'triangle_3ds_y2_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%triangle_3ds_z2_V_addr_3 = getelementptr i8 %triangle_3ds_z2_V, i64 0, i64 %zext_ln232_3"   --->   Operation 93 'getelementptr' 'triangle_3ds_z2_V_addr_3' <Predicate = (!icmp_ln40)> <Delay = 0.00>
+ST_1 : Operation 94 [2/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load_3 = load i12 %triangle_3ds_z2_V_addr_3"   --->   Operation 94 'load' 'triangle_3ds_z2_V_load_3' <Predicate = (!icmp_ln40)> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_1 : Operation 95 [1/1] (0.42ns)   --->   "%store_ln40 = store i10 %add_ln40, i10 %i" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 95 'store' 'store_ln40' <Predicate = (!icmp_ln40)> <Delay = 0.42>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 137 'ret' 'ret_ln0' <Predicate = (icmp_ln40)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%specloopname_ln40 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 96 'specloopname' 'specloopname_ln40' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 97 [1/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load = load i12 %triangle_3ds_x0_V_addr"   --->   Operation 97 'load' 'triangle_3ds_x0_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 98 [1/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load = load i12 %triangle_3ds_y0_V_addr"   --->   Operation 98 'load' 'triangle_3ds_y0_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 99 [1/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load = load i12 %triangle_3ds_z0_V_addr"   --->   Operation 99 'load' 'triangle_3ds_z0_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 100 [1/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load = load i12 %triangle_3ds_x1_V_addr"   --->   Operation 100 'load' 'triangle_3ds_x1_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 101 [1/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load = load i12 %triangle_3ds_y1_V_addr"   --->   Operation 101 'load' 'triangle_3ds_y1_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 102 [1/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load = load i12 %triangle_3ds_z1_V_addr"   --->   Operation 102 'load' 'triangle_3ds_z1_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 103 [1/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load = load i12 %triangle_3ds_x2_V_addr"   --->   Operation 103 'load' 'triangle_3ds_x2_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 104 [1/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load = load i12 %triangle_3ds_y2_V_addr"   --->   Operation 104 'load' 'triangle_3ds_y2_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 105 [1/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load = load i12 %triangle_3ds_z2_V_addr"   --->   Operation 105 'load' 'triangle_3ds_z2_V_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 106 [1/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load_1 = load i12 %triangle_3ds_x0_V_addr_1"   --->   Operation 106 'load' 'triangle_3ds_x0_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 107 [1/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load_1 = load i12 %triangle_3ds_y0_V_addr_1"   --->   Operation 107 'load' 'triangle_3ds_y0_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 108 [1/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load_1 = load i12 %triangle_3ds_z0_V_addr_1"   --->   Operation 108 'load' 'triangle_3ds_z0_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 109 [1/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load_1 = load i12 %triangle_3ds_x1_V_addr_1"   --->   Operation 109 'load' 'triangle_3ds_x1_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 110 [1/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load_1 = load i12 %triangle_3ds_y1_V_addr_1"   --->   Operation 110 'load' 'triangle_3ds_y1_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 111 [1/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load_1 = load i12 %triangle_3ds_z1_V_addr_1"   --->   Operation 111 'load' 'triangle_3ds_z1_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 112 [1/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load_1 = load i12 %triangle_3ds_x2_V_addr_1"   --->   Operation 112 'load' 'triangle_3ds_x2_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 113 [1/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load_1 = load i12 %triangle_3ds_y2_V_addr_1"   --->   Operation 113 'load' 'triangle_3ds_y2_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 114 [1/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load_1 = load i12 %triangle_3ds_z2_V_addr_1"   --->   Operation 114 'load' 'triangle_3ds_z2_V_load_1' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 115 [1/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load_2 = load i12 %triangle_3ds_x0_V_addr_2"   --->   Operation 115 'load' 'triangle_3ds_x0_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 116 [1/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load_2 = load i12 %triangle_3ds_y0_V_addr_2"   --->   Operation 116 'load' 'triangle_3ds_y0_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 117 [1/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load_2 = load i12 %triangle_3ds_z0_V_addr_2"   --->   Operation 117 'load' 'triangle_3ds_z0_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 118 [1/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load_2 = load i12 %triangle_3ds_x1_V_addr_2"   --->   Operation 118 'load' 'triangle_3ds_x1_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 119 [1/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load_2 = load i12 %triangle_3ds_y1_V_addr_2"   --->   Operation 119 'load' 'triangle_3ds_y1_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 120 [1/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load_2 = load i12 %triangle_3ds_z1_V_addr_2"   --->   Operation 120 'load' 'triangle_3ds_z1_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 121 [1/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load_2 = load i12 %triangle_3ds_x2_V_addr_2"   --->   Operation 121 'load' 'triangle_3ds_x2_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 122 [1/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load_2 = load i12 %triangle_3ds_y2_V_addr_2"   --->   Operation 122 'load' 'triangle_3ds_y2_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 123 [1/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load_2 = load i12 %triangle_3ds_z2_V_addr_2"   --->   Operation 123 'load' 'triangle_3ds_z2_V_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 124 [1/2] (1.23ns)   --->   "%triangle_3ds_x0_V_load_3 = load i12 %triangle_3ds_x0_V_addr_3"   --->   Operation 124 'load' 'triangle_3ds_x0_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 125 [1/2] (1.23ns)   --->   "%triangle_3ds_y0_V_load_3 = load i12 %triangle_3ds_y0_V_addr_3"   --->   Operation 125 'load' 'triangle_3ds_y0_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 126 [1/2] (1.23ns)   --->   "%triangle_3ds_z0_V_load_3 = load i12 %triangle_3ds_z0_V_addr_3"   --->   Operation 126 'load' 'triangle_3ds_z0_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 127 [1/2] (1.23ns)   --->   "%triangle_3ds_x1_V_load_3 = load i12 %triangle_3ds_x1_V_addr_3"   --->   Operation 127 'load' 'triangle_3ds_x1_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 128 [1/2] (1.23ns)   --->   "%triangle_3ds_y1_V_load_3 = load i12 %triangle_3ds_y1_V_addr_3"   --->   Operation 128 'load' 'triangle_3ds_y1_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 129 [1/2] (1.23ns)   --->   "%triangle_3ds_z1_V_load_3 = load i12 %triangle_3ds_z1_V_addr_3"   --->   Operation 129 'load' 'triangle_3ds_z1_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 130 [1/2] (1.23ns)   --->   "%triangle_3ds_x2_V_load_3 = load i12 %triangle_3ds_x2_V_addr_3"   --->   Operation 130 'load' 'triangle_3ds_x2_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 131 [1/2] (1.23ns)   --->   "%triangle_3ds_y2_V_load_3 = load i12 %triangle_3ds_y2_V_addr_3"   --->   Operation 131 'load' 'triangle_3ds_y2_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 132 [1/2] (1.23ns)   --->   "%triangle_3ds_z2_V_load_3 = load i12 %triangle_3ds_z2_V_addr_3"   --->   Operation 132 'load' 'triangle_3ds_z2_V_load_3' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 3192> <ROM>
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i457 @_ssdm_op_BitConcatenate.i457.i1.i8.i8.i8.i8.i8.i8.i8.i8.i8.i56.i8.i8.i8.i8.i8.i8.i8.i8.i8.i56.i8.i8.i8.i8.i8.i8.i8.i8.i8.i56.i8.i8.i8.i8.i8.i8.i8.i8.i8, i1 0, i8 %triangle_3ds_z2_V_load_3, i8 %triangle_3ds_y2_V_load_3, i8 %triangle_3ds_x2_V_load_3, i8 %triangle_3ds_z1_V_load_3, i8 %triangle_3ds_y1_V_load_3, i8 %triangle_3ds_x1_V_load_3, i8 %triangle_3ds_z0_V_load_3, i8 %triangle_3ds_y0_V_load_3, i8 %triangle_3ds_x0_V_load_3, i56 0, i8 %triangle_3ds_z2_V_load_2, i8 %triangle_3ds_y2_V_load_2, i8 %triangle_3ds_x2_V_load_2, i8 %triangle_3ds_z1_V_load_2, i8 %triangle_3ds_y1_V_load_2, i8 %triangle_3ds_x1_V_load_2, i8 %triangle_3ds_z0_V_load_2, i8 %triangle_3ds_y0_V_load_2, i8 %triangle_3ds_x0_V_load_2, i56 0, i8 %triangle_3ds_z2_V_load_1, i8 %triangle_3ds_y2_V_load_1, i8 %triangle_3ds_x2_V_load_1, i8 %triangle_3ds_z1_V_load_1, i8 %triangle_3ds_y1_V_load_1, i8 %triangle_3ds_x1_V_load_1, i8 %triangle_3ds_z0_V_load_1, i8 %triangle_3ds_y0_V_load_1, i8 %triangle_3ds_x0_V_load_1, i56 0, i8 %triangle_3ds_z2_V_load, i8 %triangle_3ds_y2_V_load, i8 %triangle_3ds_x2_V_load, i8 %triangle_3ds_z1_V_load, i8 %triangle_3ds_y1_V_load, i8 %triangle_3ds_x1_V_load, i8 %triangle_3ds_z0_V_load, i8 %triangle_3ds_y0_V_load, i8 %triangle_3ds_x0_V_load"   --->   Operation 133 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%zext_ln391 = zext i457 %p_Result_s"   --->   Operation 134 'zext' 'zext_ln391' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.axis.volatile.i512P128A, i512 %Output_2, i512 %zext_ln391" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 135 'write' 'write_ln174' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%br_ln40 = br void %for.inc" [data_gen_rendering_src/data_gen_is_done.cpp:40]   --->   Operation 136 'br' 'br_ln40' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ Output_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ triangle_3ds_x0_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_y0_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_z0_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_x1_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_y1_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_z1_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_x2_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_y2_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ triangle_3ds_z2_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; MemPort=[1111]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+i                        (alloca           ) [ 010]
+specinterface_ln0        (specinterface    ) [ 000]
+store_ln0                (store            ) [ 000]
+br_ln0                   (br               ) [ 000]
+i_1                      (load             ) [ 000]
+specpipeline_ln0         (specpipeline     ) [ 000]
+icmp_ln40                (icmp             ) [ 010]
+empty                    (speclooptripcount) [ 000]
+add_ln40                 (add              ) [ 000]
+br_ln40                  (br               ) [ 000]
+shl_ln                   (bitconcatenate   ) [ 000]
+zext_ln232               (zext             ) [ 000]
+triangle_3ds_x0_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_y0_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_z0_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_x1_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_y1_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_z1_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_x2_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_y2_V_addr   (getelementptr    ) [ 011]
+triangle_3ds_z2_V_addr   (getelementptr    ) [ 011]
+or_ln52                  (or               ) [ 000]
+zext_ln232_1             (zext             ) [ 000]
+triangle_3ds_x0_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_y0_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_z0_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_x1_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_y1_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_z1_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_x2_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_y2_V_addr_1 (getelementptr    ) [ 011]
+triangle_3ds_z2_V_addr_1 (getelementptr    ) [ 011]
+or_ln63                  (or               ) [ 000]
+zext_ln232_2             (zext             ) [ 000]
+triangle_3ds_x0_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_y0_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_z0_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_x1_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_y1_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_z1_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_x2_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_y2_V_addr_2 (getelementptr    ) [ 011]
+triangle_3ds_z2_V_addr_2 (getelementptr    ) [ 011]
+or_ln74                  (or               ) [ 000]
+zext_ln232_3             (zext             ) [ 000]
+triangle_3ds_x0_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_y0_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_z0_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_x1_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_y1_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_z1_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_x2_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_y2_V_addr_3 (getelementptr    ) [ 011]
+triangle_3ds_z2_V_addr_3 (getelementptr    ) [ 011]
+store_ln40               (store            ) [ 000]
+specloopname_ln40        (specloopname     ) [ 000]
+triangle_3ds_x0_V_load   (load             ) [ 000]
+triangle_3ds_y0_V_load   (load             ) [ 000]
+triangle_3ds_z0_V_load   (load             ) [ 000]
+triangle_3ds_x1_V_load   (load             ) [ 000]
+triangle_3ds_y1_V_load   (load             ) [ 000]
+triangle_3ds_z1_V_load   (load             ) [ 000]
+triangle_3ds_x2_V_load   (load             ) [ 000]
+triangle_3ds_y2_V_load   (load             ) [ 000]
+triangle_3ds_z2_V_load   (load             ) [ 000]
+triangle_3ds_x0_V_load_1 (load             ) [ 000]
+triangle_3ds_y0_V_load_1 (load             ) [ 000]
+triangle_3ds_z0_V_load_1 (load             ) [ 000]
+triangle_3ds_x1_V_load_1 (load             ) [ 000]
+triangle_3ds_y1_V_load_1 (load             ) [ 000]
+triangle_3ds_z1_V_load_1 (load             ) [ 000]
+triangle_3ds_x2_V_load_1 (load             ) [ 000]
+triangle_3ds_y2_V_load_1 (load             ) [ 000]
+triangle_3ds_z2_V_load_1 (load             ) [ 000]
+triangle_3ds_x0_V_load_2 (load             ) [ 000]
+triangle_3ds_y0_V_load_2 (load             ) [ 000]
+triangle_3ds_z0_V_load_2 (load             ) [ 000]
+triangle_3ds_x1_V_load_2 (load             ) [ 000]
+triangle_3ds_y1_V_load_2 (load             ) [ 000]
+triangle_3ds_z1_V_load_2 (load             ) [ 000]
+triangle_3ds_x2_V_load_2 (load             ) [ 000]
+triangle_3ds_y2_V_load_2 (load             ) [ 000]
+triangle_3ds_z2_V_load_2 (load             ) [ 000]
+triangle_3ds_x0_V_load_3 (load             ) [ 000]
+triangle_3ds_y0_V_load_3 (load             ) [ 000]
+triangle_3ds_z0_V_load_3 (load             ) [ 000]
+triangle_3ds_x1_V_load_3 (load             ) [ 000]
+triangle_3ds_y1_V_load_3 (load             ) [ 000]
+triangle_3ds_z1_V_load_3 (load             ) [ 000]
+triangle_3ds_x2_V_load_3 (load             ) [ 000]
+triangle_3ds_y2_V_load_3 (load             ) [ 000]
+triangle_3ds_z2_V_load_3 (load             ) [ 000]
+p_Result_s               (bitconcatenate   ) [ 000]
+zext_ln391               (zext             ) [ 000]
+write_ln174              (write            ) [ 000]
+br_ln40                  (br               ) [ 000]
+ret_ln0                  (ret              ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="Output_2">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Output_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="triangle_3ds_x0_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_x0_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="triangle_3ds_y0_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_y0_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="triangle_3ds_z0_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_z0_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="triangle_3ds_x1_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_x1_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="triangle_3ds_y1_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_y1_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="triangle_3ds_z1_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_z1_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="triangle_3ds_x2_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_x2_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="triangle_3ds_y2_V">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_y2_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="triangle_3ds_z2_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="triangle_3ds_z2_V"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i12.i10.i2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i457.i1.i8.i8.i8.i8.i8.i8.i8.i8.i8.i56.i8.i8.i8.i8.i8.i8.i8.i8.i8.i56.i8.i8.i8.i8.i8.i8.i8.i8.i8.i56.i8.i8.i8.i8.i8.i8.i8.i8.i8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.axis.volatile.i512P128A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="i_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="1" slack="0"/>
+<pin id="74" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="i/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="write_ln174_write_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="0" slack="0"/>
+<pin id="78" dir="0" index="1" bw="512" slack="0"/>
+<pin id="79" dir="0" index="2" bw="457" slack="0"/>
+<pin id="80" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln174/2 "/>
+</bind>
+</comp>
+
+<comp id="83" class="1004" name="triangle_3ds_x0_V_addr_gep_fu_83">
+<pin_list>
+<pin id="84" dir="0" index="0" bw="8" slack="0"/>
+<pin id="85" dir="0" index="1" bw="1" slack="0"/>
+<pin id="86" dir="0" index="2" bw="12" slack="0"/>
+<pin id="87" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x0_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="grp_access_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="12" slack="0"/>
+<pin id="92" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="93" dir="0" index="2" bw="0" slack="0"/>
+<pin id="95" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="96" dir="0" index="5" bw="8" slack="0"/>
+<pin id="97" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="99" dir="0" index="8" bw="12" slack="0"/>
+<pin id="100" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="101" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="103" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="104" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="105" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="94" dir="1" index="3" bw="8" slack="0"/>
+<pin id="98" dir="1" index="7" bw="8" slack="0"/>
+<pin id="102" dir="1" index="11" bw="8" slack="0"/>
+<pin id="106" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_x0_V_load/1 triangle_3ds_x0_V_load_1/1 triangle_3ds_x0_V_load_2/1 triangle_3ds_x0_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="triangle_3ds_y0_V_addr_gep_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="8" slack="0"/>
+<pin id="110" dir="0" index="1" bw="1" slack="0"/>
+<pin id="111" dir="0" index="2" bw="12" slack="0"/>
+<pin id="112" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y0_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="115" class="1004" name="grp_access_fu_115">
+<pin_list>
+<pin id="116" dir="0" index="0" bw="12" slack="0"/>
+<pin id="117" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="118" dir="0" index="2" bw="0" slack="0"/>
+<pin id="120" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="121" dir="0" index="5" bw="8" slack="0"/>
+<pin id="122" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="124" dir="0" index="8" bw="12" slack="0"/>
+<pin id="125" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="126" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="128" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="129" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="130" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="119" dir="1" index="3" bw="8" slack="0"/>
+<pin id="123" dir="1" index="7" bw="8" slack="0"/>
+<pin id="127" dir="1" index="11" bw="8" slack="0"/>
+<pin id="131" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_y0_V_load/1 triangle_3ds_y0_V_load_1/1 triangle_3ds_y0_V_load_2/1 triangle_3ds_y0_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="133" class="1004" name="triangle_3ds_z0_V_addr_gep_fu_133">
+<pin_list>
+<pin id="134" dir="0" index="0" bw="8" slack="0"/>
+<pin id="135" dir="0" index="1" bw="1" slack="0"/>
+<pin id="136" dir="0" index="2" bw="12" slack="0"/>
+<pin id="137" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z0_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="140" class="1004" name="grp_access_fu_140">
+<pin_list>
+<pin id="141" dir="0" index="0" bw="12" slack="0"/>
+<pin id="142" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="143" dir="0" index="2" bw="0" slack="0"/>
+<pin id="145" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="146" dir="0" index="5" bw="8" slack="0"/>
+<pin id="147" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="149" dir="0" index="8" bw="12" slack="0"/>
+<pin id="150" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="151" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="153" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="154" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="155" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="144" dir="1" index="3" bw="8" slack="0"/>
+<pin id="148" dir="1" index="7" bw="8" slack="0"/>
+<pin id="152" dir="1" index="11" bw="8" slack="0"/>
+<pin id="156" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_z0_V_load/1 triangle_3ds_z0_V_load_1/1 triangle_3ds_z0_V_load_2/1 triangle_3ds_z0_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="158" class="1004" name="triangle_3ds_x1_V_addr_gep_fu_158">
+<pin_list>
+<pin id="159" dir="0" index="0" bw="8" slack="0"/>
+<pin id="160" dir="0" index="1" bw="1" slack="0"/>
+<pin id="161" dir="0" index="2" bw="12" slack="0"/>
+<pin id="162" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x1_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="165" class="1004" name="grp_access_fu_165">
+<pin_list>
+<pin id="166" dir="0" index="0" bw="12" slack="0"/>
+<pin id="167" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="168" dir="0" index="2" bw="0" slack="0"/>
+<pin id="170" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="171" dir="0" index="5" bw="8" slack="0"/>
+<pin id="172" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="174" dir="0" index="8" bw="12" slack="0"/>
+<pin id="175" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="176" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="178" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="179" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="180" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="169" dir="1" index="3" bw="8" slack="0"/>
+<pin id="173" dir="1" index="7" bw="8" slack="0"/>
+<pin id="177" dir="1" index="11" bw="8" slack="0"/>
+<pin id="181" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_x1_V_load/1 triangle_3ds_x1_V_load_1/1 triangle_3ds_x1_V_load_2/1 triangle_3ds_x1_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="183" class="1004" name="triangle_3ds_y1_V_addr_gep_fu_183">
+<pin_list>
+<pin id="184" dir="0" index="0" bw="8" slack="0"/>
+<pin id="185" dir="0" index="1" bw="1" slack="0"/>
+<pin id="186" dir="0" index="2" bw="12" slack="0"/>
+<pin id="187" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y1_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="190" class="1004" name="grp_access_fu_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="12" slack="0"/>
+<pin id="192" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="193" dir="0" index="2" bw="0" slack="0"/>
+<pin id="195" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="196" dir="0" index="5" bw="8" slack="0"/>
+<pin id="197" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="199" dir="0" index="8" bw="12" slack="0"/>
+<pin id="200" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="201" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="203" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="204" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="205" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="194" dir="1" index="3" bw="8" slack="0"/>
+<pin id="198" dir="1" index="7" bw="8" slack="0"/>
+<pin id="202" dir="1" index="11" bw="8" slack="0"/>
+<pin id="206" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_y1_V_load/1 triangle_3ds_y1_V_load_1/1 triangle_3ds_y1_V_load_2/1 triangle_3ds_y1_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="208" class="1004" name="triangle_3ds_z1_V_addr_gep_fu_208">
+<pin_list>
+<pin id="209" dir="0" index="0" bw="8" slack="0"/>
+<pin id="210" dir="0" index="1" bw="1" slack="0"/>
+<pin id="211" dir="0" index="2" bw="12" slack="0"/>
+<pin id="212" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z1_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="215" class="1004" name="grp_access_fu_215">
+<pin_list>
+<pin id="216" dir="0" index="0" bw="12" slack="0"/>
+<pin id="217" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="218" dir="0" index="2" bw="0" slack="0"/>
+<pin id="220" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="221" dir="0" index="5" bw="8" slack="0"/>
+<pin id="222" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="224" dir="0" index="8" bw="12" slack="0"/>
+<pin id="225" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="226" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="228" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="229" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="230" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="219" dir="1" index="3" bw="8" slack="0"/>
+<pin id="223" dir="1" index="7" bw="8" slack="0"/>
+<pin id="227" dir="1" index="11" bw="8" slack="0"/>
+<pin id="231" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_z1_V_load/1 triangle_3ds_z1_V_load_1/1 triangle_3ds_z1_V_load_2/1 triangle_3ds_z1_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="233" class="1004" name="triangle_3ds_x2_V_addr_gep_fu_233">
+<pin_list>
+<pin id="234" dir="0" index="0" bw="8" slack="0"/>
+<pin id="235" dir="0" index="1" bw="1" slack="0"/>
+<pin id="236" dir="0" index="2" bw="12" slack="0"/>
+<pin id="237" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x2_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="240" class="1004" name="grp_access_fu_240">
+<pin_list>
+<pin id="241" dir="0" index="0" bw="12" slack="0"/>
+<pin id="242" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="243" dir="0" index="2" bw="0" slack="0"/>
+<pin id="245" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="246" dir="0" index="5" bw="8" slack="0"/>
+<pin id="247" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="249" dir="0" index="8" bw="12" slack="0"/>
+<pin id="250" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="251" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="253" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="254" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="255" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="244" dir="1" index="3" bw="8" slack="0"/>
+<pin id="248" dir="1" index="7" bw="8" slack="0"/>
+<pin id="252" dir="1" index="11" bw="8" slack="0"/>
+<pin id="256" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_x2_V_load/1 triangle_3ds_x2_V_load_1/1 triangle_3ds_x2_V_load_2/1 triangle_3ds_x2_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="258" class="1004" name="triangle_3ds_y2_V_addr_gep_fu_258">
+<pin_list>
+<pin id="259" dir="0" index="0" bw="8" slack="0"/>
+<pin id="260" dir="0" index="1" bw="1" slack="0"/>
+<pin id="261" dir="0" index="2" bw="12" slack="0"/>
+<pin id="262" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y2_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="265" class="1004" name="grp_access_fu_265">
+<pin_list>
+<pin id="266" dir="0" index="0" bw="12" slack="0"/>
+<pin id="267" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="268" dir="0" index="2" bw="0" slack="0"/>
+<pin id="270" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="271" dir="0" index="5" bw="8" slack="0"/>
+<pin id="272" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="274" dir="0" index="8" bw="12" slack="0"/>
+<pin id="275" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="276" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="278" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="279" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="280" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="269" dir="1" index="3" bw="8" slack="0"/>
+<pin id="273" dir="1" index="7" bw="8" slack="0"/>
+<pin id="277" dir="1" index="11" bw="8" slack="0"/>
+<pin id="281" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_y2_V_load/1 triangle_3ds_y2_V_load_1/1 triangle_3ds_y2_V_load_2/1 triangle_3ds_y2_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="283" class="1004" name="triangle_3ds_z2_V_addr_gep_fu_283">
+<pin_list>
+<pin id="284" dir="0" index="0" bw="8" slack="0"/>
+<pin id="285" dir="0" index="1" bw="1" slack="0"/>
+<pin id="286" dir="0" index="2" bw="12" slack="0"/>
+<pin id="287" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z2_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="290" class="1004" name="grp_access_fu_290">
+<pin_list>
+<pin id="291" dir="0" index="0" bw="12" slack="0"/>
+<pin id="292" dir="0" index="1" bw="8" slack="2147483647"/>
+<pin id="293" dir="0" index="2" bw="0" slack="0"/>
+<pin id="295" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="296" dir="0" index="5" bw="8" slack="0"/>
+<pin id="297" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="299" dir="0" index="8" bw="12" slack="0"/>
+<pin id="300" dir="0" index="9" bw="8" slack="2147483647"/>
+<pin id="301" dir="0" index="10" bw="0" slack="2147483647"/>
+<pin id="303" dir="0" index="12" bw="12" slack="2147483647"/>
+<pin id="304" dir="0" index="13" bw="8" slack="2147483647"/>
+<pin id="305" dir="0" index="14" bw="0" slack="2147483647"/>
+<pin id="294" dir="1" index="3" bw="8" slack="0"/>
+<pin id="298" dir="1" index="7" bw="8" slack="0"/>
+<pin id="302" dir="1" index="11" bw="8" slack="0"/>
+<pin id="306" dir="1" index="15" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="triangle_3ds_z2_V_load/1 triangle_3ds_z2_V_load_1/1 triangle_3ds_z2_V_load_2/1 triangle_3ds_z2_V_load_3/1 "/>
+</bind>
+</comp>
+
+<comp id="308" class="1004" name="triangle_3ds_x0_V_addr_1_gep_fu_308">
+<pin_list>
+<pin id="309" dir="0" index="0" bw="8" slack="0"/>
+<pin id="310" dir="0" index="1" bw="1" slack="0"/>
+<pin id="311" dir="0" index="2" bw="12" slack="0"/>
+<pin id="312" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x0_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="316" class="1004" name="triangle_3ds_y0_V_addr_1_gep_fu_316">
+<pin_list>
+<pin id="317" dir="0" index="0" bw="8" slack="0"/>
+<pin id="318" dir="0" index="1" bw="1" slack="0"/>
+<pin id="319" dir="0" index="2" bw="12" slack="0"/>
+<pin id="320" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y0_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="324" class="1004" name="triangle_3ds_z0_V_addr_1_gep_fu_324">
+<pin_list>
+<pin id="325" dir="0" index="0" bw="8" slack="0"/>
+<pin id="326" dir="0" index="1" bw="1" slack="0"/>
+<pin id="327" dir="0" index="2" bw="12" slack="0"/>
+<pin id="328" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z0_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="332" class="1004" name="triangle_3ds_x1_V_addr_1_gep_fu_332">
+<pin_list>
+<pin id="333" dir="0" index="0" bw="8" slack="0"/>
+<pin id="334" dir="0" index="1" bw="1" slack="0"/>
+<pin id="335" dir="0" index="2" bw="12" slack="0"/>
+<pin id="336" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x1_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="340" class="1004" name="triangle_3ds_y1_V_addr_1_gep_fu_340">
+<pin_list>
+<pin id="341" dir="0" index="0" bw="8" slack="0"/>
+<pin id="342" dir="0" index="1" bw="1" slack="0"/>
+<pin id="343" dir="0" index="2" bw="12" slack="0"/>
+<pin id="344" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y1_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="348" class="1004" name="triangle_3ds_z1_V_addr_1_gep_fu_348">
+<pin_list>
+<pin id="349" dir="0" index="0" bw="8" slack="0"/>
+<pin id="350" dir="0" index="1" bw="1" slack="0"/>
+<pin id="351" dir="0" index="2" bw="12" slack="0"/>
+<pin id="352" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z1_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="356" class="1004" name="triangle_3ds_x2_V_addr_1_gep_fu_356">
+<pin_list>
+<pin id="357" dir="0" index="0" bw="8" slack="0"/>
+<pin id="358" dir="0" index="1" bw="1" slack="0"/>
+<pin id="359" dir="0" index="2" bw="12" slack="0"/>
+<pin id="360" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x2_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="364" class="1004" name="triangle_3ds_y2_V_addr_1_gep_fu_364">
+<pin_list>
+<pin id="365" dir="0" index="0" bw="8" slack="0"/>
+<pin id="366" dir="0" index="1" bw="1" slack="0"/>
+<pin id="367" dir="0" index="2" bw="12" slack="0"/>
+<pin id="368" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y2_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="372" class="1004" name="triangle_3ds_z2_V_addr_1_gep_fu_372">
+<pin_list>
+<pin id="373" dir="0" index="0" bw="8" slack="0"/>
+<pin id="374" dir="0" index="1" bw="1" slack="0"/>
+<pin id="375" dir="0" index="2" bw="12" slack="0"/>
+<pin id="376" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z2_V_addr_1/1 "/>
+</bind>
+</comp>
+
+<comp id="380" class="1004" name="triangle_3ds_x0_V_addr_2_gep_fu_380">
+<pin_list>
+<pin id="381" dir="0" index="0" bw="8" slack="0"/>
+<pin id="382" dir="0" index="1" bw="1" slack="0"/>
+<pin id="383" dir="0" index="2" bw="12" slack="0"/>
+<pin id="384" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x0_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="388" class="1004" name="triangle_3ds_y0_V_addr_2_gep_fu_388">
+<pin_list>
+<pin id="389" dir="0" index="0" bw="8" slack="0"/>
+<pin id="390" dir="0" index="1" bw="1" slack="0"/>
+<pin id="391" dir="0" index="2" bw="12" slack="0"/>
+<pin id="392" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y0_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="396" class="1004" name="triangle_3ds_z0_V_addr_2_gep_fu_396">
+<pin_list>
+<pin id="397" dir="0" index="0" bw="8" slack="0"/>
+<pin id="398" dir="0" index="1" bw="1" slack="0"/>
+<pin id="399" dir="0" index="2" bw="12" slack="0"/>
+<pin id="400" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z0_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="404" class="1004" name="triangle_3ds_x1_V_addr_2_gep_fu_404">
+<pin_list>
+<pin id="405" dir="0" index="0" bw="8" slack="0"/>
+<pin id="406" dir="0" index="1" bw="1" slack="0"/>
+<pin id="407" dir="0" index="2" bw="12" slack="0"/>
+<pin id="408" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x1_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="412" class="1004" name="triangle_3ds_y1_V_addr_2_gep_fu_412">
+<pin_list>
+<pin id="413" dir="0" index="0" bw="8" slack="0"/>
+<pin id="414" dir="0" index="1" bw="1" slack="0"/>
+<pin id="415" dir="0" index="2" bw="12" slack="0"/>
+<pin id="416" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y1_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="420" class="1004" name="triangle_3ds_z1_V_addr_2_gep_fu_420">
+<pin_list>
+<pin id="421" dir="0" index="0" bw="8" slack="0"/>
+<pin id="422" dir="0" index="1" bw="1" slack="0"/>
+<pin id="423" dir="0" index="2" bw="12" slack="0"/>
+<pin id="424" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z1_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="428" class="1004" name="triangle_3ds_x2_V_addr_2_gep_fu_428">
+<pin_list>
+<pin id="429" dir="0" index="0" bw="8" slack="0"/>
+<pin id="430" dir="0" index="1" bw="1" slack="0"/>
+<pin id="431" dir="0" index="2" bw="12" slack="0"/>
+<pin id="432" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x2_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="436" class="1004" name="triangle_3ds_y2_V_addr_2_gep_fu_436">
+<pin_list>
+<pin id="437" dir="0" index="0" bw="8" slack="0"/>
+<pin id="438" dir="0" index="1" bw="1" slack="0"/>
+<pin id="439" dir="0" index="2" bw="12" slack="0"/>
+<pin id="440" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y2_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="444" class="1004" name="triangle_3ds_z2_V_addr_2_gep_fu_444">
+<pin_list>
+<pin id="445" dir="0" index="0" bw="8" slack="0"/>
+<pin id="446" dir="0" index="1" bw="1" slack="0"/>
+<pin id="447" dir="0" index="2" bw="12" slack="0"/>
+<pin id="448" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z2_V_addr_2/1 "/>
+</bind>
+</comp>
+
+<comp id="452" class="1004" name="triangle_3ds_x0_V_addr_3_gep_fu_452">
+<pin_list>
+<pin id="453" dir="0" index="0" bw="8" slack="0"/>
+<pin id="454" dir="0" index="1" bw="1" slack="0"/>
+<pin id="455" dir="0" index="2" bw="12" slack="0"/>
+<pin id="456" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x0_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="460" class="1004" name="triangle_3ds_y0_V_addr_3_gep_fu_460">
+<pin_list>
+<pin id="461" dir="0" index="0" bw="8" slack="0"/>
+<pin id="462" dir="0" index="1" bw="1" slack="0"/>
+<pin id="463" dir="0" index="2" bw="12" slack="0"/>
+<pin id="464" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y0_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="468" class="1004" name="triangle_3ds_z0_V_addr_3_gep_fu_468">
+<pin_list>
+<pin id="469" dir="0" index="0" bw="8" slack="0"/>
+<pin id="470" dir="0" index="1" bw="1" slack="0"/>
+<pin id="471" dir="0" index="2" bw="12" slack="0"/>
+<pin id="472" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z0_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="476" class="1004" name="triangle_3ds_x1_V_addr_3_gep_fu_476">
+<pin_list>
+<pin id="477" dir="0" index="0" bw="8" slack="0"/>
+<pin id="478" dir="0" index="1" bw="1" slack="0"/>
+<pin id="479" dir="0" index="2" bw="12" slack="0"/>
+<pin id="480" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x1_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="484" class="1004" name="triangle_3ds_y1_V_addr_3_gep_fu_484">
+<pin_list>
+<pin id="485" dir="0" index="0" bw="8" slack="0"/>
+<pin id="486" dir="0" index="1" bw="1" slack="0"/>
+<pin id="487" dir="0" index="2" bw="12" slack="0"/>
+<pin id="488" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y1_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="492" class="1004" name="triangle_3ds_z1_V_addr_3_gep_fu_492">
+<pin_list>
+<pin id="493" dir="0" index="0" bw="8" slack="0"/>
+<pin id="494" dir="0" index="1" bw="1" slack="0"/>
+<pin id="495" dir="0" index="2" bw="12" slack="0"/>
+<pin id="496" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z1_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="500" class="1004" name="triangle_3ds_x2_V_addr_3_gep_fu_500">
+<pin_list>
+<pin id="501" dir="0" index="0" bw="8" slack="0"/>
+<pin id="502" dir="0" index="1" bw="1" slack="0"/>
+<pin id="503" dir="0" index="2" bw="12" slack="0"/>
+<pin id="504" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_x2_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="508" class="1004" name="triangle_3ds_y2_V_addr_3_gep_fu_508">
+<pin_list>
+<pin id="509" dir="0" index="0" bw="8" slack="0"/>
+<pin id="510" dir="0" index="1" bw="1" slack="0"/>
+<pin id="511" dir="0" index="2" bw="12" slack="0"/>
+<pin id="512" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_y2_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="516" class="1004" name="triangle_3ds_z2_V_addr_3_gep_fu_516">
+<pin_list>
+<pin id="517" dir="0" index="0" bw="8" slack="0"/>
+<pin id="518" dir="0" index="1" bw="1" slack="0"/>
+<pin id="519" dir="0" index="2" bw="12" slack="0"/>
+<pin id="520" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="triangle_3ds_z2_V_addr_3/1 "/>
+</bind>
+</comp>
+
+<comp id="524" class="1004" name="store_ln0_store_fu_524">
+<pin_list>
+<pin id="525" dir="0" index="0" bw="1" slack="0"/>
+<pin id="526" dir="0" index="1" bw="10" slack="0"/>
+<pin id="527" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="529" class="1004" name="i_1_load_fu_529">
+<pin_list>
+<pin id="530" dir="0" index="0" bw="10" slack="0"/>
+<pin id="531" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="i_1/1 "/>
+</bind>
+</comp>
+
+<comp id="532" class="1004" name="icmp_ln40_fu_532">
+<pin_list>
+<pin id="533" dir="0" index="0" bw="10" slack="0"/>
+<pin id="534" dir="0" index="1" bw="10" slack="0"/>
+<pin id="535" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln40/1 "/>
+</bind>
+</comp>
+
+<comp id="538" class="1004" name="add_ln40_fu_538">
+<pin_list>
+<pin id="539" dir="0" index="0" bw="10" slack="0"/>
+<pin id="540" dir="0" index="1" bw="1" slack="0"/>
+<pin id="541" dir="1" index="2" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln40/1 "/>
+</bind>
+</comp>
+
+<comp id="544" class="1004" name="shl_ln_fu_544">
+<pin_list>
+<pin id="545" dir="0" index="0" bw="12" slack="0"/>
+<pin id="546" dir="0" index="1" bw="10" slack="0"/>
+<pin id="547" dir="0" index="2" bw="1" slack="0"/>
+<pin id="548" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="shl_ln/1 "/>
+</bind>
+</comp>
+
+<comp id="552" class="1004" name="zext_ln232_fu_552">
+<pin_list>
+<pin id="553" dir="0" index="0" bw="12" slack="0"/>
+<pin id="554" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln232/1 "/>
+</bind>
+</comp>
+
+<comp id="565" class="1004" name="or_ln52_fu_565">
+<pin_list>
+<pin id="566" dir="0" index="0" bw="12" slack="0"/>
+<pin id="567" dir="0" index="1" bw="12" slack="0"/>
+<pin id="568" dir="1" index="2" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln52/1 "/>
+</bind>
+</comp>
+
+<comp id="571" class="1004" name="zext_ln232_1_fu_571">
+<pin_list>
+<pin id="572" dir="0" index="0" bw="12" slack="0"/>
+<pin id="573" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln232_1/1 "/>
+</bind>
+</comp>
+
+<comp id="584" class="1004" name="or_ln63_fu_584">
+<pin_list>
+<pin id="585" dir="0" index="0" bw="12" slack="0"/>
+<pin id="586" dir="0" index="1" bw="12" slack="0"/>
+<pin id="587" dir="1" index="2" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln63/1 "/>
+</bind>
+</comp>
+
+<comp id="590" class="1004" name="zext_ln232_2_fu_590">
+<pin_list>
+<pin id="591" dir="0" index="0" bw="12" slack="0"/>
+<pin id="592" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln232_2/1 "/>
+</bind>
+</comp>
+
+<comp id="603" class="1004" name="or_ln74_fu_603">
+<pin_list>
+<pin id="604" dir="0" index="0" bw="12" slack="0"/>
+<pin id="605" dir="0" index="1" bw="12" slack="0"/>
+<pin id="606" dir="1" index="2" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="or(24) " fcode="or"/>
+<opset="or_ln74/1 "/>
+</bind>
+</comp>
+
+<comp id="609" class="1004" name="zext_ln232_3_fu_609">
+<pin_list>
+<pin id="610" dir="0" index="0" bw="12" slack="0"/>
+<pin id="611" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln232_3/1 "/>
+</bind>
+</comp>
+
+<comp id="622" class="1004" name="store_ln40_store_fu_622">
+<pin_list>
+<pin id="623" dir="0" index="0" bw="10" slack="0"/>
+<pin id="624" dir="0" index="1" bw="10" slack="0"/>
+<pin id="625" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln40/1 "/>
+</bind>
+</comp>
+
+<comp id="627" class="1004" name="p_Result_s_fu_627">
+<pin_list>
+<pin id="628" dir="0" index="0" bw="457" slack="0"/>
+<pin id="629" dir="0" index="1" bw="1" slack="0"/>
+<pin id="630" dir="0" index="2" bw="8" slack="0"/>
+<pin id="631" dir="0" index="3" bw="8" slack="0"/>
+<pin id="632" dir="0" index="4" bw="8" slack="0"/>
+<pin id="633" dir="0" index="5" bw="8" slack="0"/>
+<pin id="634" dir="0" index="6" bw="8" slack="0"/>
+<pin id="635" dir="0" index="7" bw="8" slack="0"/>
+<pin id="636" dir="0" index="8" bw="8" slack="0"/>
+<pin id="637" dir="0" index="9" bw="8" slack="0"/>
+<pin id="638" dir="0" index="10" bw="8" slack="0"/>
+<pin id="639" dir="0" index="11" bw="1" slack="0"/>
+<pin id="640" dir="0" index="12" bw="8" slack="0"/>
+<pin id="641" dir="0" index="13" bw="8" slack="0"/>
+<pin id="642" dir="0" index="14" bw="8" slack="0"/>
+<pin id="643" dir="0" index="15" bw="8" slack="0"/>
+<pin id="644" dir="0" index="16" bw="8" slack="0"/>
+<pin id="645" dir="0" index="17" bw="8" slack="0"/>
+<pin id="646" dir="0" index="18" bw="8" slack="0"/>
+<pin id="647" dir="0" index="19" bw="8" slack="0"/>
+<pin id="648" dir="0" index="20" bw="8" slack="0"/>
+<pin id="649" dir="0" index="21" bw="1" slack="0"/>
+<pin id="650" dir="0" index="22" bw="8" slack="0"/>
+<pin id="651" dir="0" index="23" bw="8" slack="0"/>
+<pin id="652" dir="0" index="24" bw="8" slack="0"/>
+<pin id="653" dir="0" index="25" bw="8" slack="0"/>
+<pin id="654" dir="0" index="26" bw="8" slack="0"/>
+<pin id="655" dir="0" index="27" bw="8" slack="0"/>
+<pin id="656" dir="0" index="28" bw="8" slack="0"/>
+<pin id="657" dir="0" index="29" bw="8" slack="0"/>
+<pin id="658" dir="0" index="30" bw="8" slack="0"/>
+<pin id="659" dir="0" index="31" bw="1" slack="0"/>
+<pin id="660" dir="0" index="32" bw="8" slack="0"/>
+<pin id="661" dir="0" index="33" bw="8" slack="0"/>
+<pin id="662" dir="0" index="34" bw="8" slack="0"/>
+<pin id="663" dir="0" index="35" bw="8" slack="0"/>
+<pin id="664" dir="0" index="36" bw="8" slack="0"/>
+<pin id="665" dir="0" index="37" bw="8" slack="0"/>
+<pin id="666" dir="0" index="38" bw="8" slack="0"/>
+<pin id="667" dir="0" index="39" bw="8" slack="0"/>
+<pin id="668" dir="0" index="40" bw="8" slack="0"/>
+<pin id="669" dir="1" index="41" bw="457" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="p_Result_s/2 "/>
+</bind>
+</comp>
+
+<comp id="711" class="1004" name="zext_ln391_fu_711">
+<pin_list>
+<pin id="712" dir="0" index="0" bw="457" slack="0"/>
+<pin id="713" dir="1" index="1" bw="512" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln391/2 "/>
+</bind>
+</comp>
+
+<comp id="716" class="1005" name="i_reg_716">
+<pin_list>
+<pin id="717" dir="0" index="0" bw="10" slack="0"/>
+<pin id="718" dir="1" index="1" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opset="i "/>
+</bind>
+</comp>
+
+<comp id="726" class="1005" name="triangle_3ds_x0_V_addr_reg_726">
+<pin_list>
+<pin id="727" dir="0" index="0" bw="12" slack="1"/>
+<pin id="728" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x0_V_addr "/>
+</bind>
+</comp>
+
+<comp id="731" class="1005" name="triangle_3ds_y0_V_addr_reg_731">
+<pin_list>
+<pin id="732" dir="0" index="0" bw="12" slack="1"/>
+<pin id="733" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y0_V_addr "/>
+</bind>
+</comp>
+
+<comp id="736" class="1005" name="triangle_3ds_z0_V_addr_reg_736">
+<pin_list>
+<pin id="737" dir="0" index="0" bw="12" slack="1"/>
+<pin id="738" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z0_V_addr "/>
+</bind>
+</comp>
+
+<comp id="741" class="1005" name="triangle_3ds_x1_V_addr_reg_741">
+<pin_list>
+<pin id="742" dir="0" index="0" bw="12" slack="1"/>
+<pin id="743" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x1_V_addr "/>
+</bind>
+</comp>
+
+<comp id="746" class="1005" name="triangle_3ds_y1_V_addr_reg_746">
+<pin_list>
+<pin id="747" dir="0" index="0" bw="12" slack="1"/>
+<pin id="748" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y1_V_addr "/>
+</bind>
+</comp>
+
+<comp id="751" class="1005" name="triangle_3ds_z1_V_addr_reg_751">
+<pin_list>
+<pin id="752" dir="0" index="0" bw="12" slack="1"/>
+<pin id="753" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z1_V_addr "/>
+</bind>
+</comp>
+
+<comp id="756" class="1005" name="triangle_3ds_x2_V_addr_reg_756">
+<pin_list>
+<pin id="757" dir="0" index="0" bw="12" slack="1"/>
+<pin id="758" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x2_V_addr "/>
+</bind>
+</comp>
+
+<comp id="761" class="1005" name="triangle_3ds_y2_V_addr_reg_761">
+<pin_list>
+<pin id="762" dir="0" index="0" bw="12" slack="1"/>
+<pin id="763" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y2_V_addr "/>
+</bind>
+</comp>
+
+<comp id="766" class="1005" name="triangle_3ds_z2_V_addr_reg_766">
+<pin_list>
+<pin id="767" dir="0" index="0" bw="12" slack="1"/>
+<pin id="768" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z2_V_addr "/>
+</bind>
+</comp>
+
+<comp id="771" class="1005" name="triangle_3ds_x0_V_addr_1_reg_771">
+<pin_list>
+<pin id="772" dir="0" index="0" bw="12" slack="1"/>
+<pin id="773" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x0_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="776" class="1005" name="triangle_3ds_y0_V_addr_1_reg_776">
+<pin_list>
+<pin id="777" dir="0" index="0" bw="12" slack="1"/>
+<pin id="778" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y0_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="781" class="1005" name="triangle_3ds_z0_V_addr_1_reg_781">
+<pin_list>
+<pin id="782" dir="0" index="0" bw="12" slack="1"/>
+<pin id="783" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z0_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="786" class="1005" name="triangle_3ds_x1_V_addr_1_reg_786">
+<pin_list>
+<pin id="787" dir="0" index="0" bw="12" slack="1"/>
+<pin id="788" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x1_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="791" class="1005" name="triangle_3ds_y1_V_addr_1_reg_791">
+<pin_list>
+<pin id="792" dir="0" index="0" bw="12" slack="1"/>
+<pin id="793" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y1_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="796" class="1005" name="triangle_3ds_z1_V_addr_1_reg_796">
+<pin_list>
+<pin id="797" dir="0" index="0" bw="12" slack="1"/>
+<pin id="798" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z1_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="801" class="1005" name="triangle_3ds_x2_V_addr_1_reg_801">
+<pin_list>
+<pin id="802" dir="0" index="0" bw="12" slack="1"/>
+<pin id="803" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x2_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="806" class="1005" name="triangle_3ds_y2_V_addr_1_reg_806">
+<pin_list>
+<pin id="807" dir="0" index="0" bw="12" slack="1"/>
+<pin id="808" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y2_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="811" class="1005" name="triangle_3ds_z2_V_addr_1_reg_811">
+<pin_list>
+<pin id="812" dir="0" index="0" bw="12" slack="1"/>
+<pin id="813" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z2_V_addr_1 "/>
+</bind>
+</comp>
+
+<comp id="816" class="1005" name="triangle_3ds_x0_V_addr_2_reg_816">
+<pin_list>
+<pin id="817" dir="0" index="0" bw="12" slack="1"/>
+<pin id="818" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x0_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="821" class="1005" name="triangle_3ds_y0_V_addr_2_reg_821">
+<pin_list>
+<pin id="822" dir="0" index="0" bw="12" slack="1"/>
+<pin id="823" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y0_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="826" class="1005" name="triangle_3ds_z0_V_addr_2_reg_826">
+<pin_list>
+<pin id="827" dir="0" index="0" bw="12" slack="1"/>
+<pin id="828" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z0_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="831" class="1005" name="triangle_3ds_x1_V_addr_2_reg_831">
+<pin_list>
+<pin id="832" dir="0" index="0" bw="12" slack="1"/>
+<pin id="833" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x1_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="836" class="1005" name="triangle_3ds_y1_V_addr_2_reg_836">
+<pin_list>
+<pin id="837" dir="0" index="0" bw="12" slack="1"/>
+<pin id="838" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y1_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="841" class="1005" name="triangle_3ds_z1_V_addr_2_reg_841">
+<pin_list>
+<pin id="842" dir="0" index="0" bw="12" slack="1"/>
+<pin id="843" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z1_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="846" class="1005" name="triangle_3ds_x2_V_addr_2_reg_846">
+<pin_list>
+<pin id="847" dir="0" index="0" bw="12" slack="1"/>
+<pin id="848" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x2_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="851" class="1005" name="triangle_3ds_y2_V_addr_2_reg_851">
+<pin_list>
+<pin id="852" dir="0" index="0" bw="12" slack="1"/>
+<pin id="853" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y2_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="856" class="1005" name="triangle_3ds_z2_V_addr_2_reg_856">
+<pin_list>
+<pin id="857" dir="0" index="0" bw="12" slack="1"/>
+<pin id="858" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z2_V_addr_2 "/>
+</bind>
+</comp>
+
+<comp id="861" class="1005" name="triangle_3ds_x0_V_addr_3_reg_861">
+<pin_list>
+<pin id="862" dir="0" index="0" bw="12" slack="1"/>
+<pin id="863" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x0_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="866" class="1005" name="triangle_3ds_y0_V_addr_3_reg_866">
+<pin_list>
+<pin id="867" dir="0" index="0" bw="12" slack="1"/>
+<pin id="868" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y0_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="871" class="1005" name="triangle_3ds_z0_V_addr_3_reg_871">
+<pin_list>
+<pin id="872" dir="0" index="0" bw="12" slack="1"/>
+<pin id="873" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z0_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="876" class="1005" name="triangle_3ds_x1_V_addr_3_reg_876">
+<pin_list>
+<pin id="877" dir="0" index="0" bw="12" slack="1"/>
+<pin id="878" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x1_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="881" class="1005" name="triangle_3ds_y1_V_addr_3_reg_881">
+<pin_list>
+<pin id="882" dir="0" index="0" bw="12" slack="1"/>
+<pin id="883" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y1_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="886" class="1005" name="triangle_3ds_z1_V_addr_3_reg_886">
+<pin_list>
+<pin id="887" dir="0" index="0" bw="12" slack="1"/>
+<pin id="888" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z1_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="891" class="1005" name="triangle_3ds_x2_V_addr_3_reg_891">
+<pin_list>
+<pin id="892" dir="0" index="0" bw="12" slack="1"/>
+<pin id="893" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_x2_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="896" class="1005" name="triangle_3ds_y2_V_addr_3_reg_896">
+<pin_list>
+<pin id="897" dir="0" index="0" bw="12" slack="1"/>
+<pin id="898" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_y2_V_addr_3 "/>
+</bind>
+</comp>
+
+<comp id="901" class="1005" name="triangle_3ds_z2_V_addr_3_reg_901">
+<pin_list>
+<pin id="902" dir="0" index="0" bw="12" slack="1"/>
+<pin id="903" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="triangle_3ds_z2_V_addr_3 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="75"><net_src comp="20" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="81"><net_src comp="70" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="82"><net_src comp="0" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="88"><net_src comp="2" pin="0"/><net_sink comp="83" pin=0"/></net>
+
+<net id="89"><net_src comp="52" pin="0"/><net_sink comp="83" pin=1"/></net>
+
+<net id="107"><net_src comp="83" pin="3"/><net_sink comp="90" pin=8"/></net>
+
+<net id="113"><net_src comp="4" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="114"><net_src comp="52" pin="0"/><net_sink comp="108" pin=1"/></net>
+
+<net id="132"><net_src comp="108" pin="3"/><net_sink comp="115" pin=8"/></net>
+
+<net id="138"><net_src comp="6" pin="0"/><net_sink comp="133" pin=0"/></net>
+
+<net id="139"><net_src comp="52" pin="0"/><net_sink comp="133" pin=1"/></net>
+
+<net id="157"><net_src comp="133" pin="3"/><net_sink comp="140" pin=8"/></net>
+
+<net id="163"><net_src comp="8" pin="0"/><net_sink comp="158" pin=0"/></net>
+
+<net id="164"><net_src comp="52" pin="0"/><net_sink comp="158" pin=1"/></net>
+
+<net id="182"><net_src comp="158" pin="3"/><net_sink comp="165" pin=8"/></net>
+
+<net id="188"><net_src comp="10" pin="0"/><net_sink comp="183" pin=0"/></net>
+
+<net id="189"><net_src comp="52" pin="0"/><net_sink comp="183" pin=1"/></net>
+
+<net id="207"><net_src comp="183" pin="3"/><net_sink comp="190" pin=8"/></net>
+
+<net id="213"><net_src comp="12" pin="0"/><net_sink comp="208" pin=0"/></net>
+
+<net id="214"><net_src comp="52" pin="0"/><net_sink comp="208" pin=1"/></net>
+
+<net id="232"><net_src comp="208" pin="3"/><net_sink comp="215" pin=8"/></net>
+
+<net id="238"><net_src comp="14" pin="0"/><net_sink comp="233" pin=0"/></net>
+
+<net id="239"><net_src comp="52" pin="0"/><net_sink comp="233" pin=1"/></net>
+
+<net id="257"><net_src comp="233" pin="3"/><net_sink comp="240" pin=8"/></net>
+
+<net id="263"><net_src comp="16" pin="0"/><net_sink comp="258" pin=0"/></net>
+
+<net id="264"><net_src comp="52" pin="0"/><net_sink comp="258" pin=1"/></net>
+
+<net id="282"><net_src comp="258" pin="3"/><net_sink comp="265" pin=8"/></net>
+
+<net id="288"><net_src comp="18" pin="0"/><net_sink comp="283" pin=0"/></net>
+
+<net id="289"><net_src comp="52" pin="0"/><net_sink comp="283" pin=1"/></net>
+
+<net id="307"><net_src comp="283" pin="3"/><net_sink comp="290" pin=8"/></net>
+
+<net id="313"><net_src comp="2" pin="0"/><net_sink comp="308" pin=0"/></net>
+
+<net id="314"><net_src comp="52" pin="0"/><net_sink comp="308" pin=1"/></net>
+
+<net id="315"><net_src comp="308" pin="3"/><net_sink comp="90" pin=5"/></net>
+
+<net id="321"><net_src comp="4" pin="0"/><net_sink comp="316" pin=0"/></net>
+
+<net id="322"><net_src comp="52" pin="0"/><net_sink comp="316" pin=1"/></net>
+
+<net id="323"><net_src comp="316" pin="3"/><net_sink comp="115" pin=5"/></net>
+
+<net id="329"><net_src comp="6" pin="0"/><net_sink comp="324" pin=0"/></net>
+
+<net id="330"><net_src comp="52" pin="0"/><net_sink comp="324" pin=1"/></net>
+
+<net id="331"><net_src comp="324" pin="3"/><net_sink comp="140" pin=5"/></net>
+
+<net id="337"><net_src comp="8" pin="0"/><net_sink comp="332" pin=0"/></net>
+
+<net id="338"><net_src comp="52" pin="0"/><net_sink comp="332" pin=1"/></net>
+
+<net id="339"><net_src comp="332" pin="3"/><net_sink comp="165" pin=5"/></net>
+
+<net id="345"><net_src comp="10" pin="0"/><net_sink comp="340" pin=0"/></net>
+
+<net id="346"><net_src comp="52" pin="0"/><net_sink comp="340" pin=1"/></net>
+
+<net id="347"><net_src comp="340" pin="3"/><net_sink comp="190" pin=5"/></net>
+
+<net id="353"><net_src comp="12" pin="0"/><net_sink comp="348" pin=0"/></net>
+
+<net id="354"><net_src comp="52" pin="0"/><net_sink comp="348" pin=1"/></net>
+
+<net id="355"><net_src comp="348" pin="3"/><net_sink comp="215" pin=5"/></net>
+
+<net id="361"><net_src comp="14" pin="0"/><net_sink comp="356" pin=0"/></net>
+
+<net id="362"><net_src comp="52" pin="0"/><net_sink comp="356" pin=1"/></net>
+
+<net id="363"><net_src comp="356" pin="3"/><net_sink comp="240" pin=5"/></net>
+
+<net id="369"><net_src comp="16" pin="0"/><net_sink comp="364" pin=0"/></net>
+
+<net id="370"><net_src comp="52" pin="0"/><net_sink comp="364" pin=1"/></net>
+
+<net id="371"><net_src comp="364" pin="3"/><net_sink comp="265" pin=5"/></net>
+
+<net id="377"><net_src comp="18" pin="0"/><net_sink comp="372" pin=0"/></net>
+
+<net id="378"><net_src comp="52" pin="0"/><net_sink comp="372" pin=1"/></net>
+
+<net id="379"><net_src comp="372" pin="3"/><net_sink comp="290" pin=5"/></net>
+
+<net id="385"><net_src comp="2" pin="0"/><net_sink comp="380" pin=0"/></net>
+
+<net id="386"><net_src comp="52" pin="0"/><net_sink comp="380" pin=1"/></net>
+
+<net id="387"><net_src comp="380" pin="3"/><net_sink comp="90" pin=2"/></net>
+
+<net id="393"><net_src comp="4" pin="0"/><net_sink comp="388" pin=0"/></net>
+
+<net id="394"><net_src comp="52" pin="0"/><net_sink comp="388" pin=1"/></net>
+
+<net id="395"><net_src comp="388" pin="3"/><net_sink comp="115" pin=2"/></net>
+
+<net id="401"><net_src comp="6" pin="0"/><net_sink comp="396" pin=0"/></net>
+
+<net id="402"><net_src comp="52" pin="0"/><net_sink comp="396" pin=1"/></net>
+
+<net id="403"><net_src comp="396" pin="3"/><net_sink comp="140" pin=2"/></net>
+
+<net id="409"><net_src comp="8" pin="0"/><net_sink comp="404" pin=0"/></net>
+
+<net id="410"><net_src comp="52" pin="0"/><net_sink comp="404" pin=1"/></net>
+
+<net id="411"><net_src comp="404" pin="3"/><net_sink comp="165" pin=2"/></net>
+
+<net id="417"><net_src comp="10" pin="0"/><net_sink comp="412" pin=0"/></net>
+
+<net id="418"><net_src comp="52" pin="0"/><net_sink comp="412" pin=1"/></net>
+
+<net id="419"><net_src comp="412" pin="3"/><net_sink comp="190" pin=2"/></net>
+
+<net id="425"><net_src comp="12" pin="0"/><net_sink comp="420" pin=0"/></net>
+
+<net id="426"><net_src comp="52" pin="0"/><net_sink comp="420" pin=1"/></net>
+
+<net id="427"><net_src comp="420" pin="3"/><net_sink comp="215" pin=2"/></net>
+
+<net id="433"><net_src comp="14" pin="0"/><net_sink comp="428" pin=0"/></net>
+
+<net id="434"><net_src comp="52" pin="0"/><net_sink comp="428" pin=1"/></net>
+
+<net id="435"><net_src comp="428" pin="3"/><net_sink comp="240" pin=2"/></net>
+
+<net id="441"><net_src comp="16" pin="0"/><net_sink comp="436" pin=0"/></net>
+
+<net id="442"><net_src comp="52" pin="0"/><net_sink comp="436" pin=1"/></net>
+
+<net id="443"><net_src comp="436" pin="3"/><net_sink comp="265" pin=2"/></net>
+
+<net id="449"><net_src comp="18" pin="0"/><net_sink comp="444" pin=0"/></net>
+
+<net id="450"><net_src comp="52" pin="0"/><net_sink comp="444" pin=1"/></net>
+
+<net id="451"><net_src comp="444" pin="3"/><net_sink comp="290" pin=2"/></net>
+
+<net id="457"><net_src comp="2" pin="0"/><net_sink comp="452" pin=0"/></net>
+
+<net id="458"><net_src comp="52" pin="0"/><net_sink comp="452" pin=1"/></net>
+
+<net id="459"><net_src comp="452" pin="3"/><net_sink comp="90" pin=0"/></net>
+
+<net id="465"><net_src comp="4" pin="0"/><net_sink comp="460" pin=0"/></net>
+
+<net id="466"><net_src comp="52" pin="0"/><net_sink comp="460" pin=1"/></net>
+
+<net id="467"><net_src comp="460" pin="3"/><net_sink comp="115" pin=0"/></net>
+
+<net id="473"><net_src comp="6" pin="0"/><net_sink comp="468" pin=0"/></net>
+
+<net id="474"><net_src comp="52" pin="0"/><net_sink comp="468" pin=1"/></net>
+
+<net id="475"><net_src comp="468" pin="3"/><net_sink comp="140" pin=0"/></net>
+
+<net id="481"><net_src comp="8" pin="0"/><net_sink comp="476" pin=0"/></net>
+
+<net id="482"><net_src comp="52" pin="0"/><net_sink comp="476" pin=1"/></net>
+
+<net id="483"><net_src comp="476" pin="3"/><net_sink comp="165" pin=0"/></net>
+
+<net id="489"><net_src comp="10" pin="0"/><net_sink comp="484" pin=0"/></net>
+
+<net id="490"><net_src comp="52" pin="0"/><net_sink comp="484" pin=1"/></net>
+
+<net id="491"><net_src comp="484" pin="3"/><net_sink comp="190" pin=0"/></net>
+
+<net id="497"><net_src comp="12" pin="0"/><net_sink comp="492" pin=0"/></net>
+
+<net id="498"><net_src comp="52" pin="0"/><net_sink comp="492" pin=1"/></net>
+
+<net id="499"><net_src comp="492" pin="3"/><net_sink comp="215" pin=0"/></net>
+
+<net id="505"><net_src comp="14" pin="0"/><net_sink comp="500" pin=0"/></net>
+
+<net id="506"><net_src comp="52" pin="0"/><net_sink comp="500" pin=1"/></net>
+
+<net id="507"><net_src comp="500" pin="3"/><net_sink comp="240" pin=0"/></net>
+
+<net id="513"><net_src comp="16" pin="0"/><net_sink comp="508" pin=0"/></net>
+
+<net id="514"><net_src comp="52" pin="0"/><net_sink comp="508" pin=1"/></net>
+
+<net id="515"><net_src comp="508" pin="3"/><net_sink comp="265" pin=0"/></net>
+
+<net id="521"><net_src comp="18" pin="0"/><net_sink comp="516" pin=0"/></net>
+
+<net id="522"><net_src comp="52" pin="0"/><net_sink comp="516" pin=1"/></net>
+
+<net id="523"><net_src comp="516" pin="3"/><net_sink comp="290" pin=0"/></net>
+
+<net id="528"><net_src comp="34" pin="0"/><net_sink comp="524" pin=0"/></net>
+
+<net id="536"><net_src comp="529" pin="1"/><net_sink comp="532" pin=0"/></net>
+
+<net id="537"><net_src comp="40" pin="0"/><net_sink comp="532" pin=1"/></net>
+
+<net id="542"><net_src comp="529" pin="1"/><net_sink comp="538" pin=0"/></net>
+
+<net id="543"><net_src comp="46" pin="0"/><net_sink comp="538" pin=1"/></net>
+
+<net id="549"><net_src comp="48" pin="0"/><net_sink comp="544" pin=0"/></net>
+
+<net id="550"><net_src comp="529" pin="1"/><net_sink comp="544" pin=1"/></net>
+
+<net id="551"><net_src comp="50" pin="0"/><net_sink comp="544" pin=2"/></net>
+
+<net id="555"><net_src comp="544" pin="3"/><net_sink comp="552" pin=0"/></net>
+
+<net id="556"><net_src comp="552" pin="1"/><net_sink comp="83" pin=2"/></net>
+
+<net id="557"><net_src comp="552" pin="1"/><net_sink comp="108" pin=2"/></net>
+
+<net id="558"><net_src comp="552" pin="1"/><net_sink comp="133" pin=2"/></net>
+
+<net id="559"><net_src comp="552" pin="1"/><net_sink comp="158" pin=2"/></net>
+
+<net id="560"><net_src comp="552" pin="1"/><net_sink comp="183" pin=2"/></net>
+
+<net id="561"><net_src comp="552" pin="1"/><net_sink comp="208" pin=2"/></net>
+
+<net id="562"><net_src comp="552" pin="1"/><net_sink comp="233" pin=2"/></net>
+
+<net id="563"><net_src comp="552" pin="1"/><net_sink comp="258" pin=2"/></net>
+
+<net id="564"><net_src comp="552" pin="1"/><net_sink comp="283" pin=2"/></net>
+
+<net id="569"><net_src comp="544" pin="3"/><net_sink comp="565" pin=0"/></net>
+
+<net id="570"><net_src comp="54" pin="0"/><net_sink comp="565" pin=1"/></net>
+
+<net id="574"><net_src comp="565" pin="2"/><net_sink comp="571" pin=0"/></net>
+
+<net id="575"><net_src comp="571" pin="1"/><net_sink comp="308" pin=2"/></net>
+
+<net id="576"><net_src comp="571" pin="1"/><net_sink comp="316" pin=2"/></net>
+
+<net id="577"><net_src comp="571" pin="1"/><net_sink comp="324" pin=2"/></net>
+
+<net id="578"><net_src comp="571" pin="1"/><net_sink comp="332" pin=2"/></net>
+
+<net id="579"><net_src comp="571" pin="1"/><net_sink comp="340" pin=2"/></net>
+
+<net id="580"><net_src comp="571" pin="1"/><net_sink comp="348" pin=2"/></net>
+
+<net id="581"><net_src comp="571" pin="1"/><net_sink comp="356" pin=2"/></net>
+
+<net id="582"><net_src comp="571" pin="1"/><net_sink comp="364" pin=2"/></net>
+
+<net id="583"><net_src comp="571" pin="1"/><net_sink comp="372" pin=2"/></net>
+
+<net id="588"><net_src comp="544" pin="3"/><net_sink comp="584" pin=0"/></net>
+
+<net id="589"><net_src comp="56" pin="0"/><net_sink comp="584" pin=1"/></net>
+
+<net id="593"><net_src comp="584" pin="2"/><net_sink comp="590" pin=0"/></net>
+
+<net id="594"><net_src comp="590" pin="1"/><net_sink comp="380" pin=2"/></net>
+
+<net id="595"><net_src comp="590" pin="1"/><net_sink comp="388" pin=2"/></net>
+
+<net id="596"><net_src comp="590" pin="1"/><net_sink comp="396" pin=2"/></net>
+
+<net id="597"><net_src comp="590" pin="1"/><net_sink comp="404" pin=2"/></net>
+
+<net id="598"><net_src comp="590" pin="1"/><net_sink comp="412" pin=2"/></net>
+
+<net id="599"><net_src comp="590" pin="1"/><net_sink comp="420" pin=2"/></net>
+
+<net id="600"><net_src comp="590" pin="1"/><net_sink comp="428" pin=2"/></net>
+
+<net id="601"><net_src comp="590" pin="1"/><net_sink comp="436" pin=2"/></net>
+
+<net id="602"><net_src comp="590" pin="1"/><net_sink comp="444" pin=2"/></net>
+
+<net id="607"><net_src comp="544" pin="3"/><net_sink comp="603" pin=0"/></net>
+
+<net id="608"><net_src comp="58" pin="0"/><net_sink comp="603" pin=1"/></net>
+
+<net id="612"><net_src comp="603" pin="2"/><net_sink comp="609" pin=0"/></net>
+
+<net id="613"><net_src comp="609" pin="1"/><net_sink comp="452" pin=2"/></net>
+
+<net id="614"><net_src comp="609" pin="1"/><net_sink comp="460" pin=2"/></net>
+
+<net id="615"><net_src comp="609" pin="1"/><net_sink comp="468" pin=2"/></net>
+
+<net id="616"><net_src comp="609" pin="1"/><net_sink comp="476" pin=2"/></net>
+
+<net id="617"><net_src comp="609" pin="1"/><net_sink comp="484" pin=2"/></net>
+
+<net id="618"><net_src comp="609" pin="1"/><net_sink comp="492" pin=2"/></net>
+
+<net id="619"><net_src comp="609" pin="1"/><net_sink comp="500" pin=2"/></net>
+
+<net id="620"><net_src comp="609" pin="1"/><net_sink comp="508" pin=2"/></net>
+
+<net id="621"><net_src comp="609" pin="1"/><net_sink comp="516" pin=2"/></net>
+
+<net id="626"><net_src comp="538" pin="2"/><net_sink comp="622" pin=0"/></net>
+
+<net id="670"><net_src comp="64" pin="0"/><net_sink comp="627" pin=0"/></net>
+
+<net id="671"><net_src comp="66" pin="0"/><net_sink comp="627" pin=1"/></net>
+
+<net id="672"><net_src comp="290" pin="3"/><net_sink comp="627" pin=2"/></net>
+
+<net id="673"><net_src comp="265" pin="3"/><net_sink comp="627" pin=3"/></net>
+
+<net id="674"><net_src comp="240" pin="3"/><net_sink comp="627" pin=4"/></net>
+
+<net id="675"><net_src comp="215" pin="3"/><net_sink comp="627" pin=5"/></net>
+
+<net id="676"><net_src comp="190" pin="3"/><net_sink comp="627" pin=6"/></net>
+
+<net id="677"><net_src comp="165" pin="3"/><net_sink comp="627" pin=7"/></net>
+
+<net id="678"><net_src comp="140" pin="3"/><net_sink comp="627" pin=8"/></net>
+
+<net id="679"><net_src comp="115" pin="3"/><net_sink comp="627" pin=9"/></net>
+
+<net id="680"><net_src comp="90" pin="3"/><net_sink comp="627" pin=10"/></net>
+
+<net id="681"><net_src comp="68" pin="0"/><net_sink comp="627" pin=11"/></net>
+
+<net id="682"><net_src comp="290" pin="7"/><net_sink comp="627" pin=12"/></net>
+
+<net id="683"><net_src comp="265" pin="7"/><net_sink comp="627" pin=13"/></net>
+
+<net id="684"><net_src comp="240" pin="7"/><net_sink comp="627" pin=14"/></net>
+
+<net id="685"><net_src comp="215" pin="7"/><net_sink comp="627" pin=15"/></net>
+
+<net id="686"><net_src comp="190" pin="7"/><net_sink comp="627" pin=16"/></net>
+
+<net id="687"><net_src comp="165" pin="7"/><net_sink comp="627" pin=17"/></net>
+
+<net id="688"><net_src comp="140" pin="7"/><net_sink comp="627" pin=18"/></net>
+
+<net id="689"><net_src comp="115" pin="7"/><net_sink comp="627" pin=19"/></net>
+
+<net id="690"><net_src comp="90" pin="7"/><net_sink comp="627" pin=20"/></net>
+
+<net id="691"><net_src comp="68" pin="0"/><net_sink comp="627" pin=21"/></net>
+
+<net id="692"><net_src comp="290" pin="11"/><net_sink comp="627" pin=22"/></net>
+
+<net id="693"><net_src comp="265" pin="11"/><net_sink comp="627" pin=23"/></net>
+
+<net id="694"><net_src comp="240" pin="11"/><net_sink comp="627" pin=24"/></net>
+
+<net id="695"><net_src comp="215" pin="11"/><net_sink comp="627" pin=25"/></net>
+
+<net id="696"><net_src comp="190" pin="11"/><net_sink comp="627" pin=26"/></net>
+
+<net id="697"><net_src comp="165" pin="11"/><net_sink comp="627" pin=27"/></net>
+
+<net id="698"><net_src comp="140" pin="11"/><net_sink comp="627" pin=28"/></net>
+
+<net id="699"><net_src comp="115" pin="11"/><net_sink comp="627" pin=29"/></net>
+
+<net id="700"><net_src comp="90" pin="11"/><net_sink comp="627" pin=30"/></net>
+
+<net id="701"><net_src comp="68" pin="0"/><net_sink comp="627" pin=31"/></net>
+
+<net id="702"><net_src comp="290" pin="15"/><net_sink comp="627" pin=32"/></net>
+
+<net id="703"><net_src comp="265" pin="15"/><net_sink comp="627" pin=33"/></net>
+
+<net id="704"><net_src comp="240" pin="15"/><net_sink comp="627" pin=34"/></net>
+
+<net id="705"><net_src comp="215" pin="15"/><net_sink comp="627" pin=35"/></net>
+
+<net id="706"><net_src comp="190" pin="15"/><net_sink comp="627" pin=36"/></net>
+
+<net id="707"><net_src comp="165" pin="15"/><net_sink comp="627" pin=37"/></net>
+
+<net id="708"><net_src comp="140" pin="15"/><net_sink comp="627" pin=38"/></net>
+
+<net id="709"><net_src comp="115" pin="15"/><net_sink comp="627" pin=39"/></net>
+
+<net id="710"><net_src comp="90" pin="15"/><net_sink comp="627" pin=40"/></net>
+
+<net id="714"><net_src comp="627" pin="41"/><net_sink comp="711" pin=0"/></net>
+
+<net id="715"><net_src comp="711" pin="1"/><net_sink comp="76" pin=2"/></net>
+
+<net id="719"><net_src comp="72" pin="1"/><net_sink comp="716" pin=0"/></net>
+
+<net id="720"><net_src comp="716" pin="1"/><net_sink comp="524" pin=1"/></net>
+
+<net id="721"><net_src comp="716" pin="1"/><net_sink comp="529" pin=0"/></net>
+
+<net id="722"><net_src comp="716" pin="1"/><net_sink comp="622" pin=1"/></net>
+
+<net id="729"><net_src comp="83" pin="3"/><net_sink comp="726" pin=0"/></net>
+
+<net id="730"><net_src comp="726" pin="1"/><net_sink comp="90" pin=8"/></net>
+
+<net id="734"><net_src comp="108" pin="3"/><net_sink comp="731" pin=0"/></net>
+
+<net id="735"><net_src comp="731" pin="1"/><net_sink comp="115" pin=8"/></net>
+
+<net id="739"><net_src comp="133" pin="3"/><net_sink comp="736" pin=0"/></net>
+
+<net id="740"><net_src comp="736" pin="1"/><net_sink comp="140" pin=8"/></net>
+
+<net id="744"><net_src comp="158" pin="3"/><net_sink comp="741" pin=0"/></net>
+
+<net id="745"><net_src comp="741" pin="1"/><net_sink comp="165" pin=8"/></net>
+
+<net id="749"><net_src comp="183" pin="3"/><net_sink comp="746" pin=0"/></net>
+
+<net id="750"><net_src comp="746" pin="1"/><net_sink comp="190" pin=8"/></net>
+
+<net id="754"><net_src comp="208" pin="3"/><net_sink comp="751" pin=0"/></net>
+
+<net id="755"><net_src comp="751" pin="1"/><net_sink comp="215" pin=8"/></net>
+
+<net id="759"><net_src comp="233" pin="3"/><net_sink comp="756" pin=0"/></net>
+
+<net id="760"><net_src comp="756" pin="1"/><net_sink comp="240" pin=8"/></net>
+
+<net id="764"><net_src comp="258" pin="3"/><net_sink comp="761" pin=0"/></net>
+
+<net id="765"><net_src comp="761" pin="1"/><net_sink comp="265" pin=8"/></net>
+
+<net id="769"><net_src comp="283" pin="3"/><net_sink comp="766" pin=0"/></net>
+
+<net id="770"><net_src comp="766" pin="1"/><net_sink comp="290" pin=8"/></net>
+
+<net id="774"><net_src comp="308" pin="3"/><net_sink comp="771" pin=0"/></net>
+
+<net id="775"><net_src comp="771" pin="1"/><net_sink comp="90" pin=5"/></net>
+
+<net id="779"><net_src comp="316" pin="3"/><net_sink comp="776" pin=0"/></net>
+
+<net id="780"><net_src comp="776" pin="1"/><net_sink comp="115" pin=5"/></net>
+
+<net id="784"><net_src comp="324" pin="3"/><net_sink comp="781" pin=0"/></net>
+
+<net id="785"><net_src comp="781" pin="1"/><net_sink comp="140" pin=5"/></net>
+
+<net id="789"><net_src comp="332" pin="3"/><net_sink comp="786" pin=0"/></net>
+
+<net id="790"><net_src comp="786" pin="1"/><net_sink comp="165" pin=5"/></net>
+
+<net id="794"><net_src comp="340" pin="3"/><net_sink comp="791" pin=0"/></net>
+
+<net id="795"><net_src comp="791" pin="1"/><net_sink comp="190" pin=5"/></net>
+
+<net id="799"><net_src comp="348" pin="3"/><net_sink comp="796" pin=0"/></net>
+
+<net id="800"><net_src comp="796" pin="1"/><net_sink comp="215" pin=5"/></net>
+
+<net id="804"><net_src comp="356" pin="3"/><net_sink comp="801" pin=0"/></net>
+
+<net id="805"><net_src comp="801" pin="1"/><net_sink comp="240" pin=5"/></net>
+
+<net id="809"><net_src comp="364" pin="3"/><net_sink comp="806" pin=0"/></net>
+
+<net id="810"><net_src comp="806" pin="1"/><net_sink comp="265" pin=5"/></net>
+
+<net id="814"><net_src comp="372" pin="3"/><net_sink comp="811" pin=0"/></net>
+
+<net id="815"><net_src comp="811" pin="1"/><net_sink comp="290" pin=5"/></net>
+
+<net id="819"><net_src comp="380" pin="3"/><net_sink comp="816" pin=0"/></net>
+
+<net id="820"><net_src comp="816" pin="1"/><net_sink comp="90" pin=2"/></net>
+
+<net id="824"><net_src comp="388" pin="3"/><net_sink comp="821" pin=0"/></net>
+
+<net id="825"><net_src comp="821" pin="1"/><net_sink comp="115" pin=2"/></net>
+
+<net id="829"><net_src comp="396" pin="3"/><net_sink comp="826" pin=0"/></net>
+
+<net id="830"><net_src comp="826" pin="1"/><net_sink comp="140" pin=2"/></net>
+
+<net id="834"><net_src comp="404" pin="3"/><net_sink comp="831" pin=0"/></net>
+
+<net id="835"><net_src comp="831" pin="1"/><net_sink comp="165" pin=2"/></net>
+
+<net id="839"><net_src comp="412" pin="3"/><net_sink comp="836" pin=0"/></net>
+
+<net id="840"><net_src comp="836" pin="1"/><net_sink comp="190" pin=2"/></net>
+
+<net id="844"><net_src comp="420" pin="3"/><net_sink comp="841" pin=0"/></net>
+
+<net id="845"><net_src comp="841" pin="1"/><net_sink comp="215" pin=2"/></net>
+
+<net id="849"><net_src comp="428" pin="3"/><net_sink comp="846" pin=0"/></net>
+
+<net id="850"><net_src comp="846" pin="1"/><net_sink comp="240" pin=2"/></net>
+
+<net id="854"><net_src comp="436" pin="3"/><net_sink comp="851" pin=0"/></net>
+
+<net id="855"><net_src comp="851" pin="1"/><net_sink comp="265" pin=2"/></net>
+
+<net id="859"><net_src comp="444" pin="3"/><net_sink comp="856" pin=0"/></net>
+
+<net id="860"><net_src comp="856" pin="1"/><net_sink comp="290" pin=2"/></net>
+
+<net id="864"><net_src comp="452" pin="3"/><net_sink comp="861" pin=0"/></net>
+
+<net id="865"><net_src comp="861" pin="1"/><net_sink comp="90" pin=0"/></net>
+
+<net id="869"><net_src comp="460" pin="3"/><net_sink comp="866" pin=0"/></net>
+
+<net id="870"><net_src comp="866" pin="1"/><net_sink comp="115" pin=0"/></net>
+
+<net id="874"><net_src comp="468" pin="3"/><net_sink comp="871" pin=0"/></net>
+
+<net id="875"><net_src comp="871" pin="1"/><net_sink comp="140" pin=0"/></net>
+
+<net id="879"><net_src comp="476" pin="3"/><net_sink comp="876" pin=0"/></net>
+
+<net id="880"><net_src comp="876" pin="1"/><net_sink comp="165" pin=0"/></net>
+
+<net id="884"><net_src comp="484" pin="3"/><net_sink comp="881" pin=0"/></net>
+
+<net id="885"><net_src comp="881" pin="1"/><net_sink comp="190" pin=0"/></net>
+
+<net id="889"><net_src comp="492" pin="3"/><net_sink comp="886" pin=0"/></net>
+
+<net id="890"><net_src comp="886" pin="1"/><net_sink comp="215" pin=0"/></net>
+
+<net id="894"><net_src comp="500" pin="3"/><net_sink comp="891" pin=0"/></net>
+
+<net id="895"><net_src comp="891" pin="1"/><net_sink comp="240" pin=0"/></net>
+
+<net id="899"><net_src comp="508" pin="3"/><net_sink comp="896" pin=0"/></net>
+
+<net id="900"><net_src comp="896" pin="1"/><net_sink comp="265" pin=0"/></net>
+
+<net id="904"><net_src comp="516" pin="3"/><net_sink comp="901" pin=0"/></net>
+
+<net id="905"><net_src comp="901" pin="1"/><net_sink comp="290" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: Output_2 | {2 }
+	Port: triangle_3ds_x0_V | {}
+	Port: triangle_3ds_y0_V | {}
+	Port: triangle_3ds_z0_V | {}
+	Port: triangle_3ds_x1_V | {}
+	Port: triangle_3ds_y1_V | {}
+	Port: triangle_3ds_z1_V | {}
+	Port: triangle_3ds_x2_V | {}
+	Port: triangle_3ds_y2_V | {}
+	Port: triangle_3ds_z2_V | {}
+ - Input state : 
+	Port: data_gen_config_Pipeline_data_gen_label0 : Output_2 | {}
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_x0_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_y0_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_z0_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_x1_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_y1_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_z1_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_x2_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_y2_V | {1 2 }
+	Port: data_gen_config_Pipeline_data_gen_label0 : triangle_3ds_z2_V | {1 2 }
+  - Chain level:
+	State 1
+		store_ln0 : 1
+		i_1 : 1
+		icmp_ln40 : 2
+		add_ln40 : 2
+		br_ln40 : 3
+		shl_ln : 2
+		zext_ln232 : 3
+		triangle_3ds_x0_V_addr : 4
+		triangle_3ds_x0_V_load : 5
+		triangle_3ds_y0_V_addr : 4
+		triangle_3ds_y0_V_load : 5
+		triangle_3ds_z0_V_addr : 4
+		triangle_3ds_z0_V_load : 5
+		triangle_3ds_x1_V_addr : 4
+		triangle_3ds_x1_V_load : 5
+		triangle_3ds_y1_V_addr : 4
+		triangle_3ds_y1_V_load : 5
+		triangle_3ds_z1_V_addr : 4
+		triangle_3ds_z1_V_load : 5
+		triangle_3ds_x2_V_addr : 4
+		triangle_3ds_x2_V_load : 5
+		triangle_3ds_y2_V_addr : 4
+		triangle_3ds_y2_V_load : 5
+		triangle_3ds_z2_V_addr : 4
+		triangle_3ds_z2_V_load : 5
+		or_ln52 : 3
+		zext_ln232_1 : 3
+		triangle_3ds_x0_V_addr_1 : 4
+		triangle_3ds_x0_V_load_1 : 5
+		triangle_3ds_y0_V_addr_1 : 4
+		triangle_3ds_y0_V_load_1 : 5
+		triangle_3ds_z0_V_addr_1 : 4
+		triangle_3ds_z0_V_load_1 : 5
+		triangle_3ds_x1_V_addr_1 : 4
+		triangle_3ds_x1_V_load_1 : 5
+		triangle_3ds_y1_V_addr_1 : 4
+		triangle_3ds_y1_V_load_1 : 5
+		triangle_3ds_z1_V_addr_1 : 4
+		triangle_3ds_z1_V_load_1 : 5
+		triangle_3ds_x2_V_addr_1 : 4
+		triangle_3ds_x2_V_load_1 : 5
+		triangle_3ds_y2_V_addr_1 : 4
+		triangle_3ds_y2_V_load_1 : 5
+		triangle_3ds_z2_V_addr_1 : 4
+		triangle_3ds_z2_V_load_1 : 5
+		or_ln63 : 3
+		zext_ln232_2 : 3
+		triangle_3ds_x0_V_addr_2 : 4
+		triangle_3ds_x0_V_load_2 : 5
+		triangle_3ds_y0_V_addr_2 : 4
+		triangle_3ds_y0_V_load_2 : 5
+		triangle_3ds_z0_V_addr_2 : 4
+		triangle_3ds_z0_V_load_2 : 5
+		triangle_3ds_x1_V_addr_2 : 4
+		triangle_3ds_x1_V_load_2 : 5
+		triangle_3ds_y1_V_addr_2 : 4
+		triangle_3ds_y1_V_load_2 : 5
+		triangle_3ds_z1_V_addr_2 : 4
+		triangle_3ds_z1_V_load_2 : 5
+		triangle_3ds_x2_V_addr_2 : 4
+		triangle_3ds_x2_V_load_2 : 5
+		triangle_3ds_y2_V_addr_2 : 4
+		triangle_3ds_y2_V_load_2 : 5
+		triangle_3ds_z2_V_addr_2 : 4
+		triangle_3ds_z2_V_load_2 : 5
+		or_ln74 : 3
+		zext_ln232_3 : 3
+		triangle_3ds_x0_V_addr_3 : 4
+		triangle_3ds_x0_V_load_3 : 5
+		triangle_3ds_y0_V_addr_3 : 4
+		triangle_3ds_y0_V_load_3 : 5
+		triangle_3ds_z0_V_addr_3 : 4
+		triangle_3ds_z0_V_load_3 : 5
+		triangle_3ds_x1_V_addr_3 : 4
+		triangle_3ds_x1_V_load_3 : 5
+		triangle_3ds_y1_V_addr_3 : 4
+		triangle_3ds_y1_V_load_3 : 5
+		triangle_3ds_z1_V_addr_3 : 4
+		triangle_3ds_z1_V_load_3 : 5
+		triangle_3ds_x2_V_addr_3 : 4
+		triangle_3ds_x2_V_load_3 : 5
+		triangle_3ds_y2_V_addr_3 : 4
+		triangle_3ds_y2_V_load_3 : 5
+		triangle_3ds_z2_V_addr_3 : 4
+		triangle_3ds_z2_V_load_3 : 5
+		store_ln40 : 3
+	State 2
+		p_Result_s : 1
+		zext_ln391 : 2
+		write_ln174 : 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------|---------|---------|
+| Operation|     Functional Unit     |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|
+|    add   |     add_ln40_fu_538     |    0    |    17   |
+|----------|-------------------------|---------|---------|
+|   icmp   |     icmp_ln40_fu_532    |    0    |    11   |
+|----------|-------------------------|---------|---------|
+|   write  | write_ln174_write_fu_76 |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|bitconcatenate|      shl_ln_fu_544      |    0    |    0    |
+|          |    p_Result_s_fu_627    |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|          |    zext_ln232_fu_552    |    0    |    0    |
+|          |   zext_ln232_1_fu_571   |    0    |    0    |
+|   zext   |   zext_ln232_2_fu_590   |    0    |    0    |
+|          |   zext_ln232_3_fu_609   |    0    |    0    |
+|          |    zext_ln391_fu_711    |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|          |      or_ln52_fu_565     |    0    |    0    |
+|    or    |      or_ln63_fu_584     |    0    |    0    |
+|          |      or_ln74_fu_603     |    0    |    0    |
+|----------|-------------------------|---------|---------|
+|   Total  |                         |    0    |    28   |
+|----------|-------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------------------------+--------+
+|                                |   FF   |
++--------------------------------+--------+
+|            i_reg_716           |   10   |
+|triangle_3ds_x0_V_addr_1_reg_771|   12   |
+|triangle_3ds_x0_V_addr_2_reg_816|   12   |
+|triangle_3ds_x0_V_addr_3_reg_861|   12   |
+| triangle_3ds_x0_V_addr_reg_726 |   12   |
+|triangle_3ds_x1_V_addr_1_reg_786|   12   |
+|triangle_3ds_x1_V_addr_2_reg_831|   12   |
+|triangle_3ds_x1_V_addr_3_reg_876|   12   |
+| triangle_3ds_x1_V_addr_reg_741 |   12   |
+|triangle_3ds_x2_V_addr_1_reg_801|   12   |
+|triangle_3ds_x2_V_addr_2_reg_846|   12   |
+|triangle_3ds_x2_V_addr_3_reg_891|   12   |
+| triangle_3ds_x2_V_addr_reg_756 |   12   |
+|triangle_3ds_y0_V_addr_1_reg_776|   12   |
+|triangle_3ds_y0_V_addr_2_reg_821|   12   |
+|triangle_3ds_y0_V_addr_3_reg_866|   12   |
+| triangle_3ds_y0_V_addr_reg_731 |   12   |
+|triangle_3ds_y1_V_addr_1_reg_791|   12   |
+|triangle_3ds_y1_V_addr_2_reg_836|   12   |
+|triangle_3ds_y1_V_addr_3_reg_881|   12   |
+| triangle_3ds_y1_V_addr_reg_746 |   12   |
+|triangle_3ds_y2_V_addr_1_reg_806|   12   |
+|triangle_3ds_y2_V_addr_2_reg_851|   12   |
+|triangle_3ds_y2_V_addr_3_reg_896|   12   |
+| triangle_3ds_y2_V_addr_reg_761 |   12   |
+|triangle_3ds_z0_V_addr_1_reg_781|   12   |
+|triangle_3ds_z0_V_addr_2_reg_826|   12   |
+|triangle_3ds_z0_V_addr_3_reg_871|   12   |
+| triangle_3ds_z0_V_addr_reg_736 |   12   |
+|triangle_3ds_z1_V_addr_1_reg_796|   12   |
+|triangle_3ds_z1_V_addr_2_reg_841|   12   |
+|triangle_3ds_z1_V_addr_3_reg_886|   12   |
+| triangle_3ds_z1_V_addr_reg_751 |   12   |
+|triangle_3ds_z2_V_addr_1_reg_811|   12   |
+|triangle_3ds_z2_V_addr_2_reg_856|   12   |
+|triangle_3ds_z2_V_addr_3_reg_901|   12   |
+| triangle_3ds_z2_V_addr_reg_766 |   12   |
++--------------------------------+--------+
+|              Total             |   442  |
++--------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-------------------|------|------|------|--------||---------||---------|
+|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-------------------|------|------|------|--------||---------||---------|
+|  grp_access_fu_90 |  p0  |   2  |  12  |   24   ||    9    |
+|  grp_access_fu_90 |  p2  |   2  |   0  |    0   ||    9    |
+|  grp_access_fu_90 |  p5  |   2  |   8  |   16   ||    9    |
+|  grp_access_fu_90 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_115 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_115 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_115 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_115 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_140 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_140 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_140 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_140 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_165 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_165 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_165 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_165 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_190 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_190 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_190 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_190 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_215 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_215 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_215 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_215 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_240 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_240 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_240 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_240 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_265 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_265 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_265 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_265 |  p8  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_290 |  p0  |   2  |  12  |   24   ||    9    |
+| grp_access_fu_290 |  p2  |   2  |   0  |    0   ||    9    |
+| grp_access_fu_290 |  p5  |   2  |   8  |   16   ||    9    |
+| grp_access_fu_290 |  p8  |   2  |  12  |   24   ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+|       Total       |      |      |      |   576  ||  15.372 ||   324   |
+|-------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    0   |   28   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|   15   |    -   |   324  |
+|  Register |    -   |   442  |    -   |
++-----------+--------+--------+--------+
+|   Total   |   15   |   442  |   352  |
++-----------+--------+--------+--------+

@@ -1,0 +1,84 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'data_gen_rendering_src/data_gen_is_done.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 9.46 seconds. CPU system time: 0.41 seconds. Elapsed time: 9.19 seconds; current allocated memory: 462.594 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'data_gen_config(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<512>, 0>&)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.77 seconds. CPU system time: 0.65 seconds. Elapsed time: 6.43 seconds; current allocated memory: 462.594 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 462.594 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 466.922 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 472.637 MB.
+INFO: [XFORM 203-510] Pipelining loop 'data_gen_label0' (data_gen_rendering_src/data_gen_is_done.cpp:40) in function 'data_gen_config' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 500.527 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 507.754 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'data_gen_config' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'data_gen_config_Pipeline_data_gen_label0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'data_gen_label0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'data_gen_label0'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 507.754 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 507.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'data_gen_config' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 507.754 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 507.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'data_gen_config_Pipeline_data_gen_label0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'data_gen_config_Pipeline_data_gen_label0' pipeline 'data_gen_label0' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'data_gen_config_Pipeline_data_gen_label0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 507.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'data_gen_config' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'data_gen_config/Output_1' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'data_gen_config/Output_2' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'data_gen_config' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'data_gen_config'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 507.754 MB.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.93 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.95 seconds; current allocated memory: 512.539 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 517.793 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for data_gen_config.
+INFO: [VLOG 209-307] Generating Verilog RTL for data_gen_config.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 746.69 MHz

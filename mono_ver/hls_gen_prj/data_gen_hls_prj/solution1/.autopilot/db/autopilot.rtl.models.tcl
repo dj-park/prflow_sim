@@ -1,0 +1,21 @@
+set SynModuleInfo {
+  {SRCNAME data_gen_config_Pipeline_data_gen_label0 MODELNAME data_gen_config_Pipeline_data_gen_label0 RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0
+    SUBMODULES {
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R RTLNAME data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME data_gen_config_flow_control_loop_pipe_sequential_init RTLNAME data_gen_config_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME data_gen_config_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME data_gen_config MODELNAME data_gen_config RTLNAME data_gen_config IS_TOP 1
+    SUBMODULES {
+      {MODELNAME data_gen_config_regslice_both RTLNAME data_gen_config_regslice_both BINDTYPE interface TYPE interface_regslice INSTNAME data_gen_config_regslice_both_U}
+    }
+  }
+}

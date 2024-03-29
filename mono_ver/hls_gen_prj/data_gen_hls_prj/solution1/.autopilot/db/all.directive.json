@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "data_gen_config",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/dopark\/workspace\/prflow_sim\/mono_ver\/hls_gen_prj\/data_gen_hls_prj\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "data_gen_config"
+              }]
+          }
+        }]
+    }]}

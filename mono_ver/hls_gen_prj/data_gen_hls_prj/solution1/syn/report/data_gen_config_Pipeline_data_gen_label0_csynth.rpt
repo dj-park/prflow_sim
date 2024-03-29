@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'data_gen_config_Pipeline_data_gen_label0'
+================================================================
+* Date:           Fri Mar 29 00:12:17 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        data_gen_hls_prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.339 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      800|      800|  4.000 us|  4.000 us|  800|  800|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- data_gen_label0  |      798|      798|         2|          1|          1|   798|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      68|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |       54|     -|       0|       0|    -|
+|Multiplexer      |        -|     -|       -|      45|    -|
+|Register         |        -|     -|      13|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       54|     0|      13|     113|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        2|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |        Memory       |                                 Module                                 | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |triangle_3ds_x0_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_x1_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_x2_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_y0_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_y1_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_y2_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_z0_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_z1_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    |triangle_3ds_z2_V_U  |data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R  |        6|  0|   0|    0|  3192|    8|     1|        25536|
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                |                                                                        |       54|  0|   0|    0| 28728|   72|     9|       229824|
+    +---------------------+------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln40_fu_538_p2         |         +|   0|  0|  17|          10|           1|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln40_fu_532_p2        |      icmp|   0|  0|  11|          10|           9|
+    |or_ln52_fu_565_p2          |        or|   0|  0|  12|          12|           1|
+    |or_ln63_fu_584_p2          |        or|   0|  0|  12|          12|           2|
+    |or_ln74_fu_603_p2          |        or|   0|  0|  12|          12|           2|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  68|          58|          18|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |Output_2_TDATA_blk_n     |   9|          2|    1|          2|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|   10|         20|
+    |i_fu_72                  |   9|          2|   10|         20|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   23|         46|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_72                  |  10|   0|   10|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  13|   0|   13|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+------------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |               Source Object              |    C Type    |
++-----------------+-----+-----+------------+------------------------------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  data_gen_config_Pipeline_data_gen_label0|  return value|
+|Output_2_TREADY  |   in|    1|        axis|                                  Output_2|       pointer|
+|Output_2_TDATA   |  out|  512|        axis|                                  Output_2|       pointer|
+|Output_2_TVALID  |  out|    1|        axis|                                  Output_2|       pointer|
++-----------------+-----+-----+------------+------------------------------------------+--------------+
+

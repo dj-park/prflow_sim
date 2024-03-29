@@ -1,0 +1,135 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1_coloringFB_i1_Pipeline_COLORING_FB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_coloringFB_i1_Pipeline_COLORING_FB
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1_coloringFB_i1_Pipeline_COLORING_FB_INIT_ROW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_coloringFB_i1_Pipeline_COLORING_FB_INIT_ROW
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1_coloringFB_i1_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_coloringFB_i1_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1_coloringFB_i1_stream_ap_uint_32_0_stream_ap_uint_32_0_frame_buffer_RAM_AUTO_1bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_coloringFB_i1_stream_ap_uint_32_0_stream_ap_uint_32_0_frame_buffer_RAM_AUTO_1bkb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/coloringFB_i1_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_regslice_both
+INFO: [VRFC 10-311] analyzing module coloringFB_i1_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/counter1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x0_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x1_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_x2_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y0_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y1_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_y2_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z0_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z1_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_data_gen_config_Pipeline_data_gen_label0_triangle_3ds_z2_V_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/data_gen_config_is_done/data_gen_config_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_gen_config_regslice_both
+INFO: [VRFC 10-311] analyzing module data_gen_config_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/dut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/mono.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mono
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/output_data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module output_data
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/output_data_flow_control_loop_pipe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module output_data_flow_control_loop_pipe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/output_data_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module output_data_regslice_both
+INFO: [VRFC 10-311] analyzing module output_data_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_data_transfer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_data_transfer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_fifo_w128_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_fifo_w128_d2_S_shiftReg
+INFO: [VRFC 10-311] analyzing module prj_rast1_fifo_w128_d2_S
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_mul_8ns_10ns_17_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_mul_8ns_10ns_17_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_mul_9s_9s_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_mul_9s_9s_16_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_mul_9s_9s_18_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_mul_9s_9s_18_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_p_r1_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_p_r1_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_projection_i1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_projection_i1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_rasterization1_i1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_rasterization1_i1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_regslice_both
+INFO: [VRFC 10-311] analyzing module prj_rast1_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/prj_rast1_start_for_p_r1_module_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prj_rast1_start_for_p_r1_module_U0_shiftReg
+INFO: [VRFC 10-311] analyzing module prj_rast1_start_for_p_r1_module_U0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_mac_mulsub_9s_9s_18s_18_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_mac_mulsub_9s_9s_18s_18_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module rast2_i1_mac_mulsub_9s_9s_18s_18_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_mul_9s_9s_18_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_mul_9s_9s_18_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_rasterization2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_rasterization2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_rasterization2_Pipeline_RAST2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_rasterization2_Pipeline_RAST2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_rasterization2_Pipeline_VITIS_LOOP_85_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_rasterization2_Pipeline_VITIS_LOOP_85_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_rasterization2_fragment_color_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_rasterization2_fragment_color_V_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_rasterization2_fragment_x_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_rasterization2_fragment_x_V_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_regslice_both
+INFO: [VRFC 10-311] analyzing module rast2_i1_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_udiv_16ns_8ns_8_20_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_udiv_16ns_8ns_8_20_1_divider
+INFO: [VRFC 10-311] analyzing module rast2_i1_udiv_16ns_8ns_8_20_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/rast2_i1_urem_16ns_8ns_8_20_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rast2_i1_urem_16ns_8ns_8_20_1_divider
+INFO: [VRFC 10-311] analyzing module rast2_i1_urem_16ns_8ns_8_20_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/rise_detect.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rise_detect
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/stall_cnt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stall_cnt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/stream_shell.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stream_shell
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_pixels_x_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_pixels_x_V_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_regslice_both
+INFO: [VRFC 10-311] analyzing module zculling_i1_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_z_buffer_V_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_z_buffer_V_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_zculling_i1_Pipeline_VITIS_LOOP_61_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_zculling_i1_Pipeline_VITIS_LOOP_61_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_zculling_i1_Pipeline_ZCULLING.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_zculling_i1_Pipeline_ZCULLING
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/hls_gen/applications/zculling_i1_zculling_i1_Pipeline_ZCULLING_INIT_ROW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module zculling_i1_zculling_i1_Pipeline_ZCULLING_INIT_ROW
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/src/verilog/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dopark/workspace/prflow_sim/mono_ver/rendering/rendering_prj/rendering_prj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="data_gen_is_done.cpp" path="/home/dopark/workspace/prflow_sim/mono_ver/hls_gen_prj/data_gen_rendering_src/data_gen_is_done.cpp"/>
+    <originFiles name="input_data.h" path="/home/dopark/workspace/prflow_sim/mono_ver/hls_gen_prj/data_gen_rendering_src/input_data.h"/>
+    <originFiles name="typedefs.h" path="/home/dopark/workspace/prflow_sim/mono_ver/hls_gen_prj/data_gen_rendering_src/typedefs.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

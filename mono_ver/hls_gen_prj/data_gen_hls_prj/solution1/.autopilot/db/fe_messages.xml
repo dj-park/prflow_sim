@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/dopark/workspace/prflow_sim/mono_ver/hls_gen_prj/data_gen_hls_prj/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="data_gen_config" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=data_gen_config" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="data_gen_rendering_src/data_gen_is_done.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="data_gen_config" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register_mode=both register port=Output_1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="data_gen_rendering_src/data_gen_is_done.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="data_gen_config" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis register_mode=both register port=Output_2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint&lt;512&gt;s' into 'data_gen_config(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;512&gt;, 0&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i512.s_struct.ap_uint&lt;512&gt;s" Caller="data_gen_config(hls::stream&lt;ap_uint&lt;64&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;512&gt;, 0&gt;&amp;)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

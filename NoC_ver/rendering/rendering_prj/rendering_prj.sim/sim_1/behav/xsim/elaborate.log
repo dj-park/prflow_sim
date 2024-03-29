@@ -1,0 +1,32 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'outport_sel' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/Stream_Flow_Control_ydma.v:72]
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 343 for port 'packet_from_output_ports' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/Stream_Flow_Control_ydma.v:76]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'input_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf20/leaf20.v:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'output_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf20/leaf20.v:75]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'outport_sel' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf20/Stream_Flow_Control_20.v:101]
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 343 for port 'packet_from_output_ports' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf20/Stream_Flow_Control_20.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 33 for port 'dinb' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/Input_Port.v:214]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 33 for port 'dinb' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/Input_Port.v:296]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'input_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf12/leaf12.v:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'output_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf12/leaf12.v:75]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'outport_sel' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf12/Stream_Flow_Control_12.v:101]
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 343 for port 'packet_from_output_ports' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf12/Stream_Flow_Control_12.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'input_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf22/leaf22.v:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'output_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf22/leaf22.v:75]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'outport_sel' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf22/Stream_Flow_Control_22.v:101]
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 343 for port 'packet_from_output_ports' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf22/Stream_Flow_Control_22.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'input_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf8/leaf8.v:75]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'output_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf8/leaf8.v:76]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'outport_sel' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf8/Stream_Flow_Control_8.v:101]
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 343 for port 'packet_from_output_ports' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf8/Stream_Flow_Control_8.v:105]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'input_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf16/leaf16.v:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'output_port_cluster_stall_condition_others' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf16/leaf16.v:75]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'outport_sel' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf16/Stream_Flow_Control_16.v:101]
+WARNING: [VRFC 10-3091] actual bit length 49 differs from formal bit length 343 for port 'packet_from_output_ports' [/home/dopark/workspace/prflow_sim/NoC_ver/rendering/src/verilog/app_specific/leaf16/Stream_Flow_Control_16.v:105]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
