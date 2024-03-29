@@ -89,3 +89,8 @@ To imitate the exact behavior from simulation, we need RTL(HLS-generated) associ
 However, I was lazy and kind or ignored this part...
 Current structure is enough to test the functionality.
 
+
+## FIFO experiments
+
+For 1)performance issues and 2)NoC bottleneck detection, we ended up using native async FIFO instead of shrink/expand queues. Related experiment source files are in `./fifo_experiments/`.
+
