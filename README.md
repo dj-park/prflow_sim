@@ -47,6 +47,7 @@ Copy the HLS-generated files to `./NoC_ver/rendering/src`. Use files from
 #### Verilog
 1. Need to modify dut.v. What leaf pages we will use...
 2. Copy necessary files from `{PR_FLOW_PRJ_DIR}/workspace/F003_syn_rendering/{OPERATOR_NAME}_prj/src/` to `./NoC_ver/rendering/src/verilog/app_speicific/`.
+   Also need to change module name and etc. Quite annoying..
 
 #### Simulation Project
 1. Create Vivado project (`./NoC_ver/rendering/rendering_prj/`). Add all the source codes in `./NoC_ver/rendering/rendering_prj/src/`. Make sure you add `.dat` files as well.
